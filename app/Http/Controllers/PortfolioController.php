@@ -9,15 +9,15 @@ class PortfolioController extends Controller
             'handle' => config('portfolio.handle'),
             'socialLinks' => [
                 'Gmail' => [
-                    'url'=>'mailto:falkzach+portfolio@gmail.com',//TODO: consider removing mailto link, email form?
+                    'url'=>'mailto:'.config('portfolio.email'),//TODO: consider removing mailto link, email form?
                     'class'=>'google'
                 ],
                 'GitHub' => [
-                    'url'=>'https://github.com/falkzach',
+                    'url'=>config('portfolio.githubUrl'),
                     'class'=>'github btn-secondary'
                 ],
                 'LinkedIn' => [
-                    'url'=>'https://www.linkedin.com/in/zachary-falkner-a70508a',
+                    'url'=>config('portfolio.linkedinUrl'),
                     'class'=>'linkedin'
                 ],
             ],
