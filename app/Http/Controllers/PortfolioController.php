@@ -5,11 +5,11 @@ class PortfolioController extends Controller
     public function index()
     {
         $data = [
-            'name' => 'Zachary Falkner',
-            'handle' => 'falkzach',
+            'name' => config('portfolio.name'),
+            'handle' => config('portfolio.handle'),
             'socialLinks' => [
                 'Gmail' => [
-                    'url'=>'mailto:falkzach+portfolio@gmail.com',
+                    'url'=>'mailto:falkzach+portfolio@gmail.com',//TODO: consider removing mailto link, email form?
                     'class'=>'google'
                 ],
                 'GitHub' => [
@@ -23,7 +23,7 @@ class PortfolioController extends Controller
             ],
             'headlines' => [
                 "Bachelor of Computer Science, University of Montana ",
-                "Seeking a position as a Software Developer"
+                "Seeking a position as a Software Developer, Somewhere Awesome"
             ]
         ];
         return view('index', $data);

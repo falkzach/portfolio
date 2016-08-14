@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="{{ asset('favicon.ico') }}">
 
-    <title>Zachary Falkner Portfolio</title>
+    <title>{{ config('portfolio.name') }} Portfolio</title>
     @include('template.includes')
     @yield('head')
 </head>
