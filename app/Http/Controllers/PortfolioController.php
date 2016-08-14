@@ -7,19 +7,23 @@ class PortfolioController extends Controller
         $data = [
             'name' => 'Zachary Falkner',
             'handle' => 'falkzach',
-            'links' => [
+            'socialLinks' => [
                 'Gmail' => [
                     'url'=>'mailto:falkzach+portfolio@gmail.com',
                     'class'=>'google'
                 ],
-                'github' => [
+                'GitHub' => [
                     'url'=>'https://github.com/falkzach',
-                    'class'=>'github'
+                    'class'=>'github btn-secondary'
                 ],
                 'LinkedIn' => [
                     'url'=>'https://www.linkedin.com/in/zachary-falkner-a70508a',
                     'class'=>'linkedin'
                 ],
+            ],
+            'headlines' => [
+                "Bachelor of Computer Science, University of Montana ",
+                "Seeking a position as a Software Developer"
             ]
         ];
         return view('index', $data);
