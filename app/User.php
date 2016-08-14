@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace falkzach\portfolio;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 

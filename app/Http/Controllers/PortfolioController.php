@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers;
+<?php namespace falkzach\portfolio\Http\Controllers;
 
 class PortfolioController extends Controller
 {
@@ -27,5 +27,34 @@ class PortfolioController extends Controller
             ]
         ];
         return view('index', $data);
+    }
+
+    public function projects()
+    {
+//        $data= [
+//            'projects' => [
+//                'Food Zoo Menu',
+//                'Student Hiring',
+//                'Bus Tracker',
+//                'Girz Card Photos',
+//                'Scheduled Email',
+//                'Campus Hours',
+//                'Directory API',
+//                'Comment and Attachment API',
+//                'UM Mobile App'
+//            ],
+//            'legacyProjects' => [
+//                'DCO Home',//keep
+//                'Email Queue',
+//                'Merchant Map',//keep
+//                'Hall Snacks',
+//                'Bear Hugs',
+//                'Game Room Table Timers',
+//                'RLO Discipline Database',
+//                'RLO Duty Log',
+//                'Renter Center Housing',
+//                'Renter Center Landlord Review',
+//            ]
+//        ];
     }
 }

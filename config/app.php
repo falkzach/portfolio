@@ -151,10 +151,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        falkzach\portfolio\Providers\AppServiceProvider::class,
+        falkzach\portfolio\Providers\AuthServiceProvider::class,
+        falkzach\portfolio\Providers\EventServiceProvider::class,
+        falkzach\portfolio\Providers\RouteServiceProvider::class,
 
     ],
 

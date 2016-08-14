@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace falkzach\portfolio\Http\Controllers\Auth;
 
-use App\User;
+use falkzach\portfolio\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use falkzach\portfolio\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
