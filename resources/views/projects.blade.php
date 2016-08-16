@@ -15,9 +15,14 @@
                 </h4>
             </div>
             <div id="project-{{$project->id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                <!-- TODO: Images carousel goes here!-->
-
-                {{$project->description}}
+                @foreach($project->images as $image)
+                    @include('projects.partials.image')
+                @endforeach
+                <p class="lead">{{$project->description}}</p>
+                @foreach($project->links as $link)
+                    @include('projects.partials.link')
+                @endforeach
+                <br>
             </div>
         </div>
 
