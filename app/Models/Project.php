@@ -9,4 +9,14 @@ class Project extends Model
     protected $dates = ['created_at', 'updated_at'];
 
     protected $casts = ['legacy'];
+
+    public function links()
+    {
+        return $this->belongsToMany('falkzach\portfolio\Models\Link');
+    }
+
+    public function images()
+    {
+        return $this->belongsToMany('falkzach\portfolio\Models\Image');
+    }
 }

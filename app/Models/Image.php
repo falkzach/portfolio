@@ -2,9 +2,9 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Link extends Model
+class Image Extends Model
 {
-    protected $fillable = ['name', 'url', 'css_class'];
+    protected $fillable = ['name', 'path', 'alt'];
 
     protected $dates = ['created_at', 'updated_at'];
 
