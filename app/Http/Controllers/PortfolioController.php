@@ -1,5 +1,7 @@
 <?php namespace falkzach\portfolio\Http\Controllers;
 
+use falkzach\portfolio\Models\Project;
+
 class PortfolioController extends Controller
 {
     public function index()
@@ -31,8 +33,11 @@ class PortfolioController extends Controller
 
     public function projects()
     {
-//        $data= [
-//            'projects' => [
+        $projects = Project::all();
+        $data= [
+            'projects' => $projects,
+
+//                [
 //                'Food Zoo Menu',
 //                'Student Hiring',
 //                'Bus Tracker',
@@ -43,18 +48,28 @@ class PortfolioController extends Controller
 //                'Comment and Attachment API',
 //                'UM Mobile App'
 //            ],
-//            'legacyProjects' => [
-//                'DCO Home',//keep
-//                'Email Queue',
-//                'Merchant Map',//keep
-//                'Hall Snacks',
-//                'Bear Hugs',
-//                'Game Room Table Timers',
-//                'RLO Discipline Database',
-//                'RLO Duty Log',
-//                'Renter Center Housing',
-//                'Renter Center Landlord Review',
-//            ]
-//        ];
+            'legacyProjects' => [
+                'DCO Home',//keep
+                'Email Queue',
+                'Merchant Map',//keep
+                'Hall Snacks',
+                'Bear Hugs',
+                'Game Room Table Timers',
+                'RLO Discipline Database',
+                'RLO Duty Log',
+                'Renter Center Housing',
+                'Renter Center Landlord Review',
+            ]
+        ];
+    }
+
+    public function hobbies()
+    {
+        return $this->index();
+    }
+
+    public function contact()
+    {
+        return $this->index();
     }
 }

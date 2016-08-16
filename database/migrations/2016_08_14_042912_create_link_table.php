@@ -12,7 +12,7 @@ class CreateLinkTable extends Migration
      */
     public function up()
     {
-        Schema::create('link', function (Blueprint $table) {
+        Schema::create('links', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->text('url');
@@ -28,6 +28,6 @@ class CreateLinkTable extends Migration
      */
     public function down()
     {
-        Schema::drop('link');
+        Schema::drop('links');
     }
 }

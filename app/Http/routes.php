@@ -12,3 +12,6 @@
 */
 
 Route::get('/', ['as'=>'portfolio_index', 'uses'=>'PortfolioController@index']);
+Route::get('/project', ['as'=>'projects', 'uses'=>'PortfolioController@projects']);
+Route::get('/hobbies', ['as'=>'hobbies', 'uses'=>'PortfolioController@hobbies']);
+Route::get('/contact', ['as'=>'contact', 'uses'=>'PortfolioController@contact']);
