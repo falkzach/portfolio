@@ -15,13 +15,9 @@
                 </h4>
             </div>
             <div id="project-{{$project->id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                @foreach($project->images as $image)
-                    @include('projects.partials.image')
-                @endforeach
+                @include('projects.partials.images')
                 <p class="lead">{{$project->description}}</p>
-                @foreach($project->links as $link)
-                    @include('projects.partials.link')
-                @endforeach
+                @include('projects.partials.links')
                 <br>
             </div>
         </div>
