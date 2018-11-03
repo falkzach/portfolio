@@ -44,9 +44,9 @@ class PortfolioController extends Controller
 
     public function projects()
     {
-
-        $data= [
-            'projects' => $this->projectRepository->getOriginal(),
+        return $this->index();
+//        $data= [
+//            'projects' => $this->projectRepository->getOriginal(),
 //                [
 ////                'Food Zoo Menu',
 ////                'Student Hiring',
@@ -58,7 +58,7 @@ class PortfolioController extends Controller
 ////                'Comment and Attachment API',
 ////                'UM Mobile App'
 //            ],
-            'legacyProjects' => $this->projectRepository->getLegacy()
+//            'legacyProjects' => $this->projectRepository->getLegacy()
 //                [
 ////                'DCO Home',//keep
 ////                'Email Queue',
@@ -71,8 +71,8 @@ class PortfolioController extends Controller
 ////                'Renter Center Housing',
 ////                'Renter Center Landlord Review',
 //            ]
-        ];
-        return view('projects', $data);
+//        ];
+//        return view('projects', $data);
     }
 
     public function hobbies()
