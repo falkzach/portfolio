@@ -5,4 +5,5 @@ Homestead.yaml
 Homestead.json
 .env
 .idea/
-public/bower_components
+public/resources
+yarn-error.log
