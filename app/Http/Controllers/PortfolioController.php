@@ -10,9 +10,9 @@ class PortfolioController extends Controller
      */
     private $projectRepository;
 
-    public function __construct(ProjectRepository $projectRepository)
+    public function __construct()
     {
-        $this->projectRepository = $projectRepository;
+//        $this->projectRepository = $projectRepository;
     }
 
     public function index()
@@ -35,8 +35,11 @@ class PortfolioController extends Controller
                 ],
             ],
             'headlines' => [
-                "Bachelor of Computer Science, University of Montana ",
-                "Seeking a position as a Software Developer, Somewhere Awesome"
+                "Masters of Computer Science, University of Montana, 2018 ",
+                "Seeking a position as a Software Developer"
+            ],
+            'banners' => [
+                ['src'=>asset("img/canyon_creek_pano.jpg"),'alt'=>"Canyon Creek, panoramic of an alpine lake and surrounding peaks"]
             ]
         ];
         return view('index', $data);
@@ -44,10 +47,78 @@ class PortfolioController extends Controller
 
     public function projects()
     {
-        return $this->index();
+        $id = 0;
+        $data = [
+            'projects' => [
+                (object) [
+                    'id' => ++$id,
+                    'name' => 'miniML',
+                    'assignment' => '',
+                    'description' => 'asdb<br/>multilinesetc<br/>adhjfasdkjfhasjkd',
+                    'links' =>  [
+                        (object) ['url' => 'https://github.com/optimusmoose/miniML', 'class' => 'github',]
+                    ]
+                ],
+                (object) [
+                    'id' => ++$id,
+                    'name' => 'Bike Thing',
+                    'assignment' => '',
+                    'description' => '',
+                    'links' => (object) [
+                        (object) ['url' => 'https://github.com/um-iot/IoT-bike-thing', 'class' => 'github',]
+                    ],
+                ],
+                (object) [
+                    'id' => ++$id,
+                    'name' => 'Fairly Fast Fragment Assembly Program',
+                    'assignment' => '',
+                    'description' => '',
+                    'links' => (object) [
+                        (object) ['url' => 'https://github.com/falkzach/CSCI558-Computational-Biology/blob/master/Grad_Challenge_1/assemble.cpp','class' => 'github',],
+                    ],
+                ],
+                (object) [
+                    'id' => ++$id,
+                    'name' => 'Software Optimization Projects',
+                    'assignment' => '',
+                    'description' => '',
+                    'links' => (object) [
+                        (object) ['url' => 'https://github.com/falkzach/CSCI595-Software-Optimization', 'class' => 'github',],
+                    ],
+                ],
+                (object) [
+                    'id' => ++$id,
+                    'name' => 'Simulation Modeling Assignments',
+                    'assignment' => '',
+                    'description' => '',
+                    'links' => (object) [
+                        (object) ['url' => 'https://github.com/falkzach/CSCI557-Simulation-Modeling', 'class' => 'github',],
+                    ],
+                ],
+                (object) [
+                    'id' => ++$id,
+                    'name' => 'Another Adventure Game',
+                    'assignment' => '',
+                    'description' => '',
+                    'links' => (object) [
+                        (object) ['url' => 'https://github.com/um-game/Another-Adventure-Game', 'class' => 'github',],
+                    ]
+                ],
+                (object) [
+                    'id' => ++$id,
+                    'name' => 'Introduction to Compilers',
+                    'assignment' => '',
+                    'description' => '',
+                    'links' => (object) [
+                        (object) ['url' => 'https://bitbucket.org/orserang/intro-compiler-design', 'class' => 'bitbucket',],
+                    ],
+                ]
+            ]
+        ];
+
+        return view('projects', $data);
 //        $data= [
-//            'projects' => $this->projectRepository->getOriginal(),
-//                [
+//                'SAIT_APPS' => [
 ////                'Food Zoo Menu',
 ////                'Student Hiring',
 ////                'Bus Tracker',
@@ -57,9 +128,7 @@ class PortfolioController extends Controller
 ////                'Directory API',
 ////                'Comment and Attachment API',
 ////                'UM Mobile App'
-//            ],
-//            'legacyProjects' => $this->projectRepository->getLegacy()
-//                [
+////                //legacy
 ////                'DCO Home',//keep
 ////                'Email Queue',
 ////                'Merchant Map',//keep
@@ -70,9 +139,9 @@ class PortfolioController extends Controller
 ////                'RLO Duty Log',
 ////                'Renter Center Housing',
 ////                'Renter Center Landlord Review',
-//            ]
+//                ]
 //        ];
-//        return view('projects', $data);
+
     }
 
     public function hobbies()

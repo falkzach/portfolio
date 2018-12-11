@@ -5,7 +5,6 @@
     <div id="projects" role="tablist" aria-multiselectable="true">
 
         @foreach($projects as $project)
-
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="heading-{{$project->id}}">
                 <h4 class="panel-title">
@@ -15,13 +14,12 @@
                 </h4>
             </div>
             <div id="project-{{$project->id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                @include('projects.partials.images')
-                <p class="lead">{{$project->description}}</p>
+                <p class="lead">{!! $project->description!!}</p>
+                {{--@include('projects.partials.images')--}}
                 @include('projects.partials.links')
                 <br>
             </div>
         </div>
-
         @endforeach
 
     </div>
