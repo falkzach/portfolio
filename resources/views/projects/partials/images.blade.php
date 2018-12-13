@@ -8,7 +8,7 @@
         <div class="carousel-inner" role="listbox">
             @foreach($project->images as $key => $image)
                 <div class="carousel-item <?=$key===0?'active':''?>">
-                    <img src="{{asset($image->path)}}" alt="{{$image->alt}}">
+                    <img class="lozad img-fluid rounded-top rounded-bottom p-3" data-src="{{asset($image->src)}}" alt="{{isset($image->alt)?$image->alt:""}}">
                 </div>
             @endforeach
         </div>

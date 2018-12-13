@@ -25,7 +25,7 @@ font-awesome@^4.7.0, font-awesome@~4.7:
   resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
   integrity sha1-j6jPBBGhoxr9B7BtKQK7n8gVoTM=
 
-highlight.js@^5.7.0:
+highlight.js@^9.1.13:
   version "9.13.1"
   resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.13.1.tgz#054586d53a6863311168488a0f58d6c505ce641e"
   integrity sha512-Sc28JNQNDzaH6PORtRLMvif9RSn1mYuOoX3omVjnb0+HbpPygU2ALBI0R/wsiqCb4/fcp07Gdo8g+fhtFrQl6A==
@@ -34,6 +34,11 @@ jquery@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
   integrity sha512-Ubldcmxp5np52/ENotGxlLe6aGMvmF4R8S6tZjsP6Knsaxd/xp3Zrh50cG93lR6nPXyUFwzN3ZSOQI0wRJNdGg==
+
+lozad@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/lozad/-/lozad-1.7.0.tgz#ecf333eb3e149ce44bbbb21ab9d64f4b85987888"
+  integrity sha512-JnS/SYVftXcn05VEHDMz7rP7UKNdoI+RC1JUbZVtQvnwFTdh3HRecW8tx4f2lPLOKQwgx+uuEImwWDxuVXdmMw==
 
 popper.js@^1.0.2, popper.js@^1.14.6:
   version "1.14.6"

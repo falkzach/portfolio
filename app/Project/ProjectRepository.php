@@ -223,27 +223,21 @@ EOF;
                     'description' => $this->fffap_description,
                     'links' => (object) [
                         (object) ['url' => 'https://github.com/falkzach/CSCI558-Computational-Biology/blob/master/Grad_Challenge_1/assemble.cpp','class' => 'github',],
-                        (object) ['url' => 'https://github.com/falkzach/CSCI558-Computational-Biology','class' => 'github', 'name'=>'Full Computation Biology Repository'],
+                        (object) ['url' => 'https://github.com/falkzach/CSCI558-Computational-Biology','class' => 'github', 'name'=>'Full Computation Biology Repository',],
                     ],
-                    'snippets' => [$this->fffap_snippet_0, $this->ffap_snippet_1, $this->ffap_snippet_2]
+                    'snippets' => [$this->fffap_snippet_0, $this->ffap_snippet_1, $this->ffap_snippet_2],
+                    'images' => [
+                        (object) ['key' => 0, 'src' => 'img/codewolf_small.png', 'alt' => 'The code wolf girl that appears on Dr. Seranges Custom Screen Printed shirts'],
+                        ],
                 ],
                 (object) [
                     'id' => ++$p_id,
-                    'name' => 'miniML',
-                    'assignment' => '',
-                    'description' => '',
-                    'links' =>  [
-                        (object) ['url' => 'https://github.com/optimusmoose/miniML', 'class' => 'github',]
-                    ]
-                ],
-                (object) [
-                    'id' => ++$p_id,
-                    'name' => 'Bike Thing',
+                    'name' => 'Another Adventure Game',
                     'assignment' => '',
                     'description' => '',
                     'links' => (object) [
-                        (object) ['url' => 'https://github.com/um-iot/IoT-bike-thing', 'class' => 'github',]
-                    ],
+                        (object) ['url' => 'https://github.com/um-game/Another-Adventure-Game', 'class' => 'github',],
+                    ]
                 ],
                 (object) [
                     'id' => ++$p_id,
@@ -252,6 +246,15 @@ EOF;
                     'description' => '',
                     'links' => (object) [
                         (object) ['url' => 'https://github.com/falkzach/CSCI595-Software-Optimization', 'class' => 'github',],
+                    ],
+                ],
+                (object) [
+                    'id' => ++$p_id,
+                    'name' => 'Bike Thing',
+                    'assignment' => '',
+                    'description' => '',
+                    'links' => (object) [
+                        (object) ['url' => 'https://github.com/um-iot/IoT-bike-thing', 'class' => 'github',]
                     ],
                 ],
                 (object) [
@@ -265,13 +268,14 @@ EOF;
                 ],
                 (object) [
                     'id' => ++$p_id,
-                    'name' => 'Another Adventure Game',
+                    'name' => 'miniML',
                     'assignment' => '',
                     'description' => '',
-                    'links' => (object) [
-                        (object) ['url' => 'https://github.com/um-game/Another-Adventure-Game', 'class' => 'github',],
+                    'links' =>  [
+                        (object) ['url' => 'https://github.com/optimusmoose/miniML', 'class' => 'github',]
                     ]
                 ],
+
 
             ],
 
