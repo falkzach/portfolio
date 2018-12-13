@@ -156,14 +156,6 @@ body {
     }
 }
 
-@media (min-width: 62em) {
-    .masthead,
-    .mastfoot,
-    .cover-container {
-        width: 100rem;
-    }
-}
-
 pre {
     display: inline-block;
     white-space: pre-wrap;
