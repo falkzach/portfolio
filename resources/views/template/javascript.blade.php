@@ -1,4 +1,4 @@
-<!-- Bootstrap core JavaScript
+<!-- JavaScript libraries
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="{!! asset("resources/jquery/dist/jquery.min.js") !!}"></script>

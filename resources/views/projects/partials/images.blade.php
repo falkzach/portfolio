@@ -1,8 +1,8 @@
 @if(isset($project->images))
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <div id="{{ $project->name }}-carousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             @foreach($project->images as $key => $image)
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="<?=$key===0?'active':''?>"></li>
+                <li data-target="#{{ $project->name }}-carousel" data-slide-to="0" class="<?=$key===0?'active':''?>"></li>
             @endforeach
         </ol>
         <div class="carousel-inner" role="listbox">
@@ -12,11 +12,11 @@
                 </div>
             @endforeach
         </div>
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#{{ $project->name }}-carousel" role="button" data-slide="prev">
             <span class="icon-prev" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#{{ $project->name }}-carousel" role="button" data-slide="next">
             <span class="icon-next" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>

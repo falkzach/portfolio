@@ -4,7 +4,6 @@
     <div class="inner cover content">
         <div>
             @foreach($banners as $banner)
-                {{--TODO: bug in bootstrap responsive image scaling, width when entering large view--}}
                 <img  src="{{ asset("img/loading.png") }}" data-src="{{ $banner['src'] }}" class="lozad img-fluid rounded-top rounded-bottom p-3" alt={{$banner['alt']}} />
             @endforeach
         </div>

@@ -56,13 +56,39 @@ class PortfolioController extends Controller
         return view('cv', $data);
     }
 
-    public function hobbies()
+    public function outdoors()
     {
-        $data = [
-            'hobbies' => [
+        $description =
+<<<EOF
+I like to spend my free time in the outdoors and partake in many outdoor recreational activates including Climbing, Mountain Biking, Whitewater Rafting, Backpacking and this fall even learned to Kayak. 
+Sometimes I have the privilege of sharing my passion for the outdoors with others through guiding. During my time attending Graduate School at the University of Montana, I've enjoyed working for the <a href="https://www.umt.edu/crec/Outdoor" target="_blank">Outdoor Program</a>, one of the unique features of our campus.
+<br />I currently hold an AMGA Climbing Wall Instructor Lead Certification with the intent of persuing my Single Pitch Instructor Certification. I also hold a current Wilderness First Responder Certification.
+EOF;
 
+        $id = 0;
+        $data = [
+            'outdoors' => (object) [
+                'description' => $description,
+            ],
+
+            'images' => [
+                (object) ['key' => $id++, 'src' => 'img/hobbies/backpacking_bass_creek.jpg', 'alt' => ''],
+                (object) ['key' => $id++, 'src' => 'img/hobbies/backpacking_canyon_creek.jpg', 'alt' => ''],
+                (object) ['key' => $id++, 'src' => 'img/hobbies/backpacking_kootenia.jpg', 'alt' => ''],
+                (object) ['key' => $id++, 'src' => 'img/hobbies/boating_havasu.jpg', 'alt' => ''],
+                (object) ['key' => $id++, 'src' => 'img/hobbies/chasing_ice_missions.jpg', 'alt' => ''],
+                (object) ['key' => $id++, 'src' => 'img/hobbies/climbing_holcomb_valley_pinnacles.jpg', 'alt' => 'Climbing at Holcomb Valley Pinnacles'],
+                (object) ['key' => $id++, 'src' => 'img/hobbies/guiding_backpacking_capitol_reef.jpg', 'alt' => ''],
+                (object) ['key' => $id++, 'src' => 'img/hobbies/guiding_climbing_kootenia.jpg', 'alt' => ''],
+                (object) ['key' => $id++, 'src' => 'img/hobbies/guiding_hiking_ch-paa-qn.jpg', 'alt' => ''],
+                (object) ['key' => $id++, 'src' => 'img/hobbies/guiding_hiking_ch-paa-qn_1.jpg', 'alt' => ''],
+                (object) ['key' => $id++, 'src' => 'img/hobbies/guiding_rafting_blackfoot.jpg', 'alt' => ''],
+                (object) ['key' => $id++, 'src' => 'img/hobbies/ice_climbing.jpg', 'alt' => ''],
+                (object) ['key' => $id++, 'src' => 'img/hobbies/mtb_kreis_pond.jpg', 'alt' => ''],
+                (object) ['key' => $id++, 'src' => 'img/hobbies/xc-skiing_lolo_pass.jpg', 'alt' => ''],
             ],
         ];
+        shuffle($data['images']);
         return view('hobbies', $data);
     }
 

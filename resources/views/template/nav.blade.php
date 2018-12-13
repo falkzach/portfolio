@@ -5,7 +5,7 @@
             <a class="nav-link {{ Request::route()->getName() === 'portfolio_index' ? 'active' : null }}" href="{{ route('portfolio_index') }}">Home</a>
             <a class="nav-link {{ Request::route()->getName() === 'projects' ? 'active' : null }}" href="{{ route('projects') }}">Graduate Projects</a>
             <a class="nav-link {{ Request::route()->getName() === 'cv' ? 'active' : null }}" href="{{ route('cv') }}">Graduate CV</a>
-            <a class="nav-link {{ Request::route()->getName() === 'hobbies' ? 'active' : null }}" href="{{ route('hobbies') }}">Hobbies</a>
+            <a class="nav-link {{ Request::route()->getName() === 'outdoors' ? 'active' : null }}" href="{{ route('outdoors') }}">Outdoors</a>
             <a class="nav-link {{ Request::route()->getName() === 'contact' ? 'active' : null }}" href="{{ route('contact') }}">Contact</a>
         </nav>
     </div>

@@ -160,7 +160,6 @@ CCAGGA
 ACCAGGA
 TACCAG
 AATTACCAGG
-
 EOF;
 
         $this->ffap_snippet_1 =
@@ -194,10 +193,6 @@ GATTA
 
 GATTACCAATTACCAGGA
 EOF;
-
-;
-
-
     }
 
     public function getAll()
