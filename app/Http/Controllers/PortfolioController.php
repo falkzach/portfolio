@@ -10,9 +10,9 @@ class PortfolioController extends Controller
      */
     private $projectRepository;
 
-    public function __construct()
+    public function __construct(ProjectRepository $projectRepository)
     {
-//        $this->projectRepository = $projectRepository;
+        $this->projectRepository = $projectRepository;
     }
 
     public function index()
@@ -21,15 +21,15 @@ class PortfolioController extends Controller
             'name' => config('portfolio.name'),
             'handle' => config('portfolio.handle'),
             'socialLinks' => [
-                'Gmail' => [
+                'Gmail' => (object) [
                     'url'=>'mailto:'.config('portfolio.email'),//TODO: consider removing mailto link, email form?
                     'class'=>'google'
                 ],
-                'GitHub' => [
+                'GitHub' => (object) [
                     'url'=>config('portfolio.githubUrl'),
                     'class'=>'github btn-secondary'
                 ],
-                'LinkedIn' => [
+                'LinkedIn' => (object) [
                     'url'=>config('portfolio.linkedinUrl'),
                     'class'=>'linkedin'
                 ],
@@ -47,110 +47,39 @@ class PortfolioController extends Controller
 
     public function projects()
     {
-        $id = 0;
-        $data = [
-            'projects' => [
-                (object) [
-                    'id' => ++$id,
-                    'name' => 'miniML',
-                    'assignment' => '',
-                    'description' => 'asdb<br/>multilinesetc<br/>adhjfasdkjfhasjkd',
-                    'links' =>  [
-                        (object) ['url' => 'https://github.com/optimusmoose/miniML', 'class' => 'github',]
-                    ]
-                ],
-                (object) [
-                    'id' => ++$id,
-                    'name' => 'Bike Thing',
-                    'assignment' => '',
-                    'description' => '',
-                    'links' => (object) [
-                        (object) ['url' => 'https://github.com/um-iot/IoT-bike-thing', 'class' => 'github',]
-                    ],
-                ],
-                (object) [
-                    'id' => ++$id,
-                    'name' => 'Fairly Fast Fragment Assembly Program',
-                    'assignment' => '',
-                    'description' => '',
-                    'links' => (object) [
-                        (object) ['url' => 'https://github.com/falkzach/CSCI558-Computational-Biology/blob/master/Grad_Challenge_1/assemble.cpp','class' => 'github',],
-                    ],
-                ],
-                (object) [
-                    'id' => ++$id,
-                    'name' => 'Software Optimization Projects',
-                    'assignment' => '',
-                    'description' => '',
-                    'links' => (object) [
-                        (object) ['url' => 'https://github.com/falkzach/CSCI595-Software-Optimization', 'class' => 'github',],
-                    ],
-                ],
-                (object) [
-                    'id' => ++$id,
-                    'name' => 'Simulation Modeling Assignments',
-                    'assignment' => '',
-                    'description' => '',
-                    'links' => (object) [
-                        (object) ['url' => 'https://github.com/falkzach/CSCI557-Simulation-Modeling', 'class' => 'github',],
-                    ],
-                ],
-                (object) [
-                    'id' => ++$id,
-                    'name' => 'Another Adventure Game',
-                    'assignment' => '',
-                    'description' => '',
-                    'links' => (object) [
-                        (object) ['url' => 'https://github.com/um-game/Another-Adventure-Game', 'class' => 'github',],
-                    ]
-                ],
-                (object) [
-                    'id' => ++$id,
-                    'name' => 'Introduction to Compilers',
-                    'assignment' => '',
-                    'description' => '',
-                    'links' => (object) [
-                        (object) ['url' => 'https://bitbucket.org/orserang/intro-compiler-design', 'class' => 'bitbucket',],
-                    ],
-                ]
-            ]
-        ];
-
+        $data = $this->projectRepository->getAll();
         return view('projects', $data);
-//        $data= [
-//                'SAIT_APPS' => [
-////                'Food Zoo Menu',
-////                'Student Hiring',
-////                'Bus Tracker',
-////                'Girz Card Photos',
-////                'Scheduled Email',
-////                'Campus Hours',
-////                'Directory API',
-////                'Comment and Attachment API',
-////                'UM Mobile App'
-////                //legacy
-////                'DCO Home',//keep
-////                'Email Queue',
-////                'Merchant Map',//keep
-////                'Hall Snacks',
-////                'Bear Hugs',
-////                'Game Room Table Timers',
-////                'RLO Discipline Database',
-////                'RLO Duty Log',
-////                'Renter Center Housing',
-////                'Renter Center Landlord Review',
-//                ]
-//        ];
+    }
 
+    public function cv() {
+        $data = [];
+        return view('cv', $data);
     }
 
     public function hobbies()
     {
-        return $this->index();
+        $data = [
+            'hobbies' => [
+
+            ],
+        ];
+        return view('hobbies', $data);
     }
 
     public function contact()
     {
-        return $this->index();
+        $data = [
+            'socialLinks' => [
+                'Gmail' => (object) [
+                    'url'=>'mailto:'.config('portfolio.email'),//TODO: consider removing mailto link, email form?
+                    'class'=>'google'
+                ],
+                'LinkedIn' => (object) [
+                    'url'=>config('portfolio.linkedinUrl'),
+                    'class'=>'linkedin'
+                ],
+            ],
+        ];
+        return view('contact', $data);
     }
 }

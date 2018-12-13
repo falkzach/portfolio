@@ -1,12 +1,8 @@
 @extends('template.base')
 
 @section('body')
-    <div>
-    @foreach($hobbies as $hobbie)
-
-    @endforeach
-    </div>
     <div class="inner cover">
-
+        <h1 class="cover-heading">Hobbies</h1>
+        <p class="lead"></p>
     </div>
 @endsection
