@@ -52,6 +52,14 @@ class PortfolioController extends Controller
     }
 
     public function cv() {
+        $guiding =
+            <<<EOF
+In addition to serving the Computer Science Department as a Teaching Assistant, I was also lucky enough to get to serve the University of Montana Campus by working as a climbing guide and instructor for the <a href="http://www.umt.edu/crec/Outdoor" target="_blank">Outdoor Program.</a>
+It was in this capacity that I have been able to share my love of outdoor recreation with other students. In my time here I have introduced many students to the world of climbing, guided climbing, summits, backpacking trips, and even whitewater rafting.
+My time with the Outdoor Program was instrumental in my personal and professional development and highlights the uniqu opertunities that exist at the University of Montana.
+
+EOF;
+
         $data = [
             'degrees' => (object) [
                 (object) ['name' => 'Bachelor\'s of Science in Computer Science', 'year' => '2016', 'institution' => 'University of Montana',],
@@ -60,24 +68,24 @@ class PortfolioController extends Controller
             'research' => (object) [
                 'headline' => '',
                 'projects' => [
-                    (object) ['name' => 'FS Air Quality Monitoring', 'description' => "Currently doing some pro-bono consulting to assist the Forest Service Model Air Quality Data"],
-                    (object) ['name' => 'NTSG Landsat Ground-cover Classification', 'description' => ""],
-                    (object) ['name' => 'miniML', 'description' => ""],
+                    (object) ['name' => 'FS Air Quality Monitoring', 'description' => 'Presently engaged in some light consulting with the Forest Service in order to model air quality from a variety of distributed data collection networks. My work here islimited to providing expertiece on implementation of data processing and modeling pipelines in exchange for frosty beverages.'],
+                    (object) ['name' => 'NTSG Landsat Ground-cover Classification', 'description' => '...'],
+                    (object) ['name' => 'miniML', 'description' => '...'],
                 ],
             ],
             'teaching' => (object) [
-                'headline' => 'Fou four of the five semester of my graduate studies I had the privilege of serving the Computer Science Department as a Teaching Assistant.  ',
+                'headline' => 'For four of the five semester of my graduate studies I had the privilege of serving the Computer Science Department as a Teaching Assistant. While my role would varry based on course and instructor, I like to beleive that I was an asset to my students. While office hours were scheduled regularly, I strived to maintain a welcoming, open door environment.',
                 'courses' => [
-                    (object) ['name' => 'CSCI 315E - Computers, Ethics, and Society', 'instructor' => 'Dr. Joel Henry', 'semester' => 'Autumn 2017', 'description' => 'Ethical problems that computer scientists face. The codes of ethics of professional computing societies. The social implications of computers, computing, and other digital technologies.'],
-                    (object) ['name' => 'CSCI 426 - Advanced Programming Theory and Practice', 'instructor' => 'Dr. Joel Henry', 'semester' => 'Autumn 2017', 'description' => ''],
-                    (object) ['name' => 'CSCI 442 - Design and Analysis of Algorithms', 'instructor' => 'Dr. Travis Wheeler', 'semester' => 'Spring 2017', 'description' => ''],
-                    (object) ['name' => 'CSCI 480/580 - Parallel Computing', 'instructor' => 'Dr. Travis Wheeler', 'semester' => 'Spring 2017', 'description' => ''],
-                    (object) ['name' => 'CSCI 315E - Computers, Ethics, and Society', 'instructor' => 'Dr. William Knight', 'semester' => 'Autumn 2017, Spring 2018', 'description' => ''],
+                    (object) ['name' => 'CSCI 315E - Computers, Ethics, and Society', 'instructor' => 'Dr. Joel Henry', 'semester' => 'Autumn 2017', 'description' => 'This course explores the ethical problems that computer scientists face; The codes of ethics of professional computing societies; the social implications of computers, computing, and other digital technologies. The course also serves as the departments upper division writing course. My role was primarily to grade and provide feedback on students papers though I did cover a couple of lectures while Dr. Henry was traveling.'],
+                    (object) ['name' => 'CSCI 426 - Advanced Programming Theory and Practice', 'instructor' => 'Dr. Joel Henry', 'semester' => 'Autumn 2017', 'description' => 'This course, at the time, explored advanced software engineering principals, in particular deisgn patters, their use and implementation, and software complexity. My role was primarily bookkeeping and too act as an additional resource when students needed help. Again I covered lecture sections while Dr. Henry was away.'],
+                    (object) ['name' => 'CSCI 442 - Design and Analysis of Algorithms', 'instructor' => 'Dr. Travis Wheeler', 'semester' => 'Spring 2017', 'description' => 'Grading algorithms for Dr. Travis Wheeler was the single most difficult undertaking durning my time at the UM. Grading for an algorithms course is nothing like taking an algorithms course. I was responsible for attening class, completing homework to produce anser keys (to be reviewd with Dr. Wheeler), maintaining office hours for students, and the grading of assignments. My work for this course forced me to develop a much deeper understanding and appriciation for algorithmic design and analysis.'],
+                    (object) ['name' => 'CSCI 480/580 - Parallel Computing', 'instructor' => 'Dr. Travis Wheeler', 'semester' => 'Spring 2017', 'description' => 'My role in this course was simple. Attend class, stay current on the course material, and act as an additional reference to students both in understanding the material and implementing paraellel algorithms for homework.'],
+                    (object) ['name' => 'CSCI 315E - Computers, Ethics, and Society', 'instructor' => 'Dr. William Knight', 'semester' => 'Autumn 2017, Spring 2018', 'description' => 'My last two semesters as a TA I worked again on the ethics course, this time however for income instructor William Knight. My roles were similar to before, primarily grading papers, providing feedback to students,  and holding office hours. However I was also a resource to Dr. Knight enabling him to effectly run the course to the previous high standards of Dr. Henry.'],
                 ],
             ],
-            'guiding' => "",
-            'other' => (object) [
-
+            'guiding' => $guiding,
+            'others' => (object) [
+                (object) ['name' => 'US Forest Service Wilderness Practitioners Toolboxes', 'description' => 'During my final semester here, I worked for the US Forest Service in order to migrate their <a href="https://www.wilderness.net/index.cfm?fuse=toolboxes" target="_blank">collection of toolboxes</a> to the Universities Casecade CMS in order to align with federal accessability requirements as dictated by the ADA and Title9.'],
             ],
             'reflections' => "",
 

@@ -1,7 +1,8 @@
 @extends('template.base')
 
 @section('body')
-    <div class="inner cover text-left">
+    <div class="inner text-left">
+        <br>
         <h1>Graduate CV</h1>
         <div class="">
             <h2>Education</h2>
@@ -42,6 +43,17 @@
         <div class="">
             <h2>Guiding for the Outdoor Program</h2>
             <pre class="text-light">{!! $guiding !!}</pre>
+        </div>
+        <div class="">
+            <h2>Other Work</h2>
+            <ul>
+            @foreach($others as $other)
+                <li>
+                    <h3>{{$other->name}}</h3>
+                    <p class="text-light">{!! $other->description !!}</p>
+                </li>
+            @endforeach
+            </ul>
         </div>
         <div class="">
             <h2>Reflections</h2>

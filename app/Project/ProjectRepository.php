@@ -22,6 +22,9 @@ class ProjectRepository
     private $adventure_assignment;
     private $adventure_description;
 
+    private $ml_assignment;
+    private $ml_description;
+
     public function __construct()
     {
         $this->compilers_assignment =
@@ -237,6 +240,18 @@ Implementation the procedurally generated dungeons was my primary coding role on
 While only a prototype I find it quite satisfying running about the mazes created by my dungeon generator, complete with randomly placed enemies, obstacles, treasures, egress and ingress.
 EOF;
 
+        $this->ml_assignment =
+<<<EOF
+
+EOF;
+
+        $this->ml_description =
+<<<EOF
+
+EOF;
+
+
+
 
 
 
@@ -319,6 +334,18 @@ EOF;
                     'links' =>  [
                         (object) ['url' => 'https://github.com/optimusmoose/miniML', 'class' => 'github',]
                     ]
+                ],
+                (object) [
+                    'id' => ++$p_id,
+                    'name' => 'Substance Abuse Risk Classified by Quantized Personality Evaluation',
+                    'assignment' => $this->ml_assignment,
+                    'description' => $this->ml_description,
+                    'links' => (object) [
+                        (object) ['url' => 'https://github.com/falkzach', 'class' => 'github',],
+                        (object) ['url' => asset('files/ml_assignment.pdf'), 'class' => 'file', 'name' => 'Assignment',],
+                        (object) ['url' => asset('files/falkner_substance_abuse_classification.pdf'), 'class' => 'file', 'name' => 'Report',],
+
+                    ],
                 ],
             ],
 
