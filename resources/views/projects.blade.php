@@ -1,7 +1,7 @@
 @extends('template.base')
 
 @section('body')
-    <div class="inner cover">
+    <div class="inner cover cover text-left">
         <h1>Graduate Projects</h1>
         <br />
         <div id="projects" role="tablist" aria-multiselectable="true">
@@ -10,7 +10,7 @@
             <div class="card bg-dark text-white">
                 <div class="card-header" role="tab" id="heading-{{$project->id}}">
                     <h4 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-parent="#projects" data-target="#project-{{$project->id}}" aria-controls="project-{{$project->id}}">
+                        <button class="btn" data-toggle="collapse" data-parent="#projects" data-target="#project-{{$project->id}}" aria-controls="project-{{$project->id}}">
                             {{$project->name}}
                         </button>
                     </h4>

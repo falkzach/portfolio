@@ -2,9 +2,9 @@
 
 @section('body')
     <div class="inner cover">
-        <h1 class="cover-heading">Outdoors</h1>
+        <h1 class="cover-heading text-left">Outdoors</h1>
 
-        <p class="lead">{!! $outdoors->description !!}</p>
+        <p class="lead text-left">{!! $outdoors->description !!}</p>
 
         <div id="hobbies-carousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">

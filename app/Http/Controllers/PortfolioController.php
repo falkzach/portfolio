@@ -1,6 +1,5 @@
 <?php namespace falkzach\portfolio\Http\Controllers;
 
-use falkzach\portfolio\Models\Project;
 use falkzach\portfolio\Project\ProjectRepository;
 
 class PortfolioController extends Controller
@@ -35,11 +34,12 @@ class PortfolioController extends Controller
                 ],
             ],
             'headlines' => [
-                "Masters of Computer Science, University of Montana, 2018 ",
+                "Master's of Science in Computer Science",
+                "University of Montana, 2018",
                 "Seeking a position as a Software Developer"
             ],
             'banners' => [
-                ['src'=>asset("img/canyon_creek_pano.jpg"),'alt'=>"Canyon Creek, panoramic of an alpine lake and surrounding peaks"]
+                (object) ['src'=>asset("img/canyon_creek_pano.jpg"),'alt'=>"Canyon Creek, panoramic of an alpine lake and surrounding peaks"]
             ]
         ];
         return view('index', $data);
@@ -52,7 +52,31 @@ class PortfolioController extends Controller
     }
 
     public function cv() {
-        $data = [];
+        $data = [
+            'degrees' => (object) [
+                (object) ['name' => "Bachelor's of Science in Computer Science", 'year' => '2016', 'institution' => 'University of Montana',],
+                (object) ['name' => "Master's of Science in Computer Science", 'year' => '2018', 'institution' => 'University of Montana'],
+            ],
+            'research' => (object) [
+                'headline' => '',
+                'projects' => [
+                    (object) ['name' => "", 'description' => ""],
+                    (object) ['name' => "", 'description' => ""],
+                ]
+
+            ],
+            'teaching' => (object) [
+                'headline' => '',
+                'courses' => [
+                    (object) ['name' => "", 'description' => ""],
+                ]
+
+            ],
+            'reflections' => "",
+            'guiding' => "",
+
+
+        ];
         return view('cv', $data);
     }
 
