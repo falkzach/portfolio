@@ -14,8 +14,7 @@
         <p class="lead">
             @foreach($socialLinks as $name => $link)
             <a href="{{$link->url}}" target="_blank" class="btn btn-social btn-{{$link->class}}">
-                <span class="fa fa-{{$link->class}}"></span>
-                {{$name}}
+                <span class="fa fa-{{$link->class}}"></span>{{$name}}
             </a>
             @endforeach
         </p>

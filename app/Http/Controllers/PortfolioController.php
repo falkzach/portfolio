@@ -54,26 +54,32 @@ class PortfolioController extends Controller
     public function cv() {
         $data = [
             'degrees' => (object) [
-                (object) ['name' => "Bachelor's of Science in Computer Science", 'year' => '2016', 'institution' => 'University of Montana',],
-                (object) ['name' => "Master's of Science in Computer Science", 'year' => '2018', 'institution' => 'University of Montana'],
+                (object) ['name' => 'Bachelor\'s of Science in Computer Science', 'year' => '2016', 'institution' => 'University of Montana',],
+                (object) ['name' => 'Master\'s of Science in Computer Science', 'year' => '2018', 'institution' => 'University of Montana'],
             ],
             'research' => (object) [
                 'headline' => '',
                 'projects' => [
-                    (object) ['name' => "", 'description' => ""],
-                    (object) ['name' => "", 'description' => ""],
-                ]
-
+                    (object) ['name' => 'FS Air Quality Monitoring', 'description' => "Currently doing some pro-bono consulting to assist the Forest Service Model Air Quality Data"],
+                    (object) ['name' => 'NTSG Landsat Ground-cover Classification', 'description' => ""],
+                    (object) ['name' => 'miniML', 'description' => ""],
+                ],
             ],
             'teaching' => (object) [
-                'headline' => '',
+                'headline' => 'Fou four of the five semester of my graduate studies I had the privilege of serving the Computer Science Department as a Teaching Assistant.  ',
                 'courses' => [
-                    (object) ['name' => "", 'description' => ""],
-                ]
+                    (object) ['name' => 'CSCI 315E - Computers, Ethics, and Society', 'instructor' => 'Dr. Joel Henry', 'semester' => 'Autumn 2017', 'description' => 'Ethical problems that computer scientists face. The codes of ethics of professional computing societies. The social implications of computers, computing, and other digital technologies.'],
+                    (object) ['name' => 'CSCI 426 - Advanced Programming Theory and Practice', 'instructor' => 'Dr. Joel Henry', 'semester' => 'Autumn 2017', 'description' => ''],
+                    (object) ['name' => 'CSCI 442 - Design and Analysis of Algorithms', 'instructor' => 'Dr. Travis Wheeler', 'semester' => 'Spring 2017', 'description' => ''],
+                    (object) ['name' => 'CSCI 480/580 - Parallel Computing', 'instructor' => 'Dr. Travis Wheeler', 'semester' => 'Spring 2017', 'description' => ''],
+                    (object) ['name' => 'CSCI 315E - Computers, Ethics, and Society', 'instructor' => 'Dr. William Knight', 'semester' => 'Autumn 2017, Spring 2018', 'description' => ''],
+                ],
+            ],
+            'guiding' => "",
+            'other' => (object) [
 
             ],
             'reflections' => "",
-            'guiding' => "",
 
 
         ];
@@ -86,7 +92,7 @@ class PortfolioController extends Controller
 <<<EOF
 I like to spend my free time in the outdoors and partake in many outdoor recreational activates including Climbing, Mountain Biking, Whitewater Rafting, Backpacking and this fall even learned to Kayak. 
 Sometimes I have the privilege of sharing my passion for the outdoors with others through guiding. During my time attending Graduate School at the University of Montana, I've enjoyed working for the <a href="https://www.umt.edu/crec/Outdoor" target="_blank">Outdoor Program</a>, one of the unique features of our campus.
-<br />I currently hold an AMGA Climbing Wall Instructor Lead Certification with the intent of persuing my Single Pitch Instructor Certification. I also hold a current Wilderness First Responder Certification.
+I currently hold an <a href="https://amga.com/" target="_blank">AMGA</a> Climbing Wall Instructor Lead Certification and hold a current Wilderness First Responder Certification from <a href="https://aeriemedicine.com" target="_blank">AEIRE Backcountry Medicine</a>. I intent to peruse the level of Single Pitch Instructor and beyond.  
 EOF;
 
         $id = 0;

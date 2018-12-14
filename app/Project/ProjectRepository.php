@@ -16,6 +16,12 @@ class ProjectRepository
     private $fffap_snippet_1;
     private $fffap_snippet_2;
 
+    private $opt_assignment;
+    private $opt_description;
+
+    private $adventure_assignment;
+    private $adventure_description;
+
     public function __construct()
     {
         $this->compilers_assignment =
@@ -162,7 +168,7 @@ TACCAG
 AATTACCAGG
 EOF;
 
-        $this->ffap_snippet_1 =
+        $this->fffap_snippet_1 =
 <<<EOF
 
 relevent fragments:
@@ -174,7 +180,7 @@ ACCAATTAC
 AATTACCAGG
 EOF;
 
-        $this->ffap_snippet_2 =
+        $this->fffap_snippet_2 =
 <<<EOF
 
 ./assemble.o fragments.txt
@@ -193,6 +199,48 @@ GATTA
 
 GATTACCAATTACCAGGA
 EOF;
+
+    $this->opt_assignment =
+<<<EOF
+The objective of Dr. Oliver Serange's Software Optimization Course is simple. Make things go faster.
+Why? Because it's there. Because we can. Because we need to. The same reason we climb mountains.
+For this course three optimization problems were presented by Dr. Serang, in the format of a friendly competition.
+The rules are simple, matching the reference output is all that matters for the grade, submit the trivial solution. But the fastest implementation takes the custom screen printed shirt...
+These problems consisted of the following:
+<ol>
+<li>Game of Life</li>
+<li>Matrix Multiplication</li>
+<li>Identifying Short Reads in a Genome</li>
+</ol>
+In addition several optimizations were demonstrated and evaluated in smaller weekly assignments.
+The book for this course is freely available thanks to Dr. Serang: <a href="https://alg.cs.umt.edu/media/serang-code-optimization-in-c++11.pdf" target="_blank">Code Optimizations In C++11</a>
+EOF;
+
+    $this->opt_description =
+<<<EOF
+While I was not declared victor for any of the three competitions, I was always a top contender. More importantly I became versed in the dark arts of bit twiddling
+I found this class to be both incredibly rewarding and challenging and am fond of the friendly competition format. Each assignment forced me push further develop and flex my C++ skills and as a result it has become my favorite language.
+EOF;
+
+    $this->adventure_assignment =
+<<<EOF
+The assignment for this project was simple. Design and implement a mobile application or game.
+This was a group project completed with classmates Kyle Lucke, Adam Clemons, and Cameron Gomke and we elected to build a game using the <a href="https://unity3d.com/" target="_blank">Unity Game Engine</a>.
+EOF;
+
+        $this->adventure_description =
+<<<EOF
+Another Adventure game is yet another 2d top down roll playing game. A story of keeping up on laundry. Of clean pants and algorithms homework.
+It looks like a corny Zelda clone (because we "borrowed" sprites for prototyping) but it actually has some interesting and unique mechanics including procedurally generated random dungeons and synergystic item sets.
+I played key roles in UI design, low fidelity mockups, as well as use case analysis and storyboarding.
+Implementation the procedurally generated dungeons was my primary coding role on this project. In addition I also implemented some basic start game tutorial functionality.
+While only a prototype I find it quite satisfying running about the mazes created by my dungeon generator, complete with randomly placed enemies, obstacles, treasures, egress and ingress.
+EOF;
+
+
+
+
+
     }
 
     public function getAll()
@@ -220,7 +268,7 @@ EOF;
                         (object) ['url' => 'https://github.com/falkzach/CSCI558-Computational-Biology/blob/master/Grad_Challenge_1/assemble.cpp','class' => 'github',],
                         (object) ['url' => 'https://github.com/falkzach/CSCI558-Computational-Biology','class' => 'github', 'name'=>'Full Computation Biology Repository',],
                     ],
-                    'snippets' => [$this->fffap_snippet_0, $this->ffap_snippet_1, $this->ffap_snippet_2],
+                    'snippets' => [$this->fffap_snippet_0, $this->fffap_snippet_1, $this->fffap_snippet_2],
                     'images' => [
                         (object) ['key' => 0, 'src' => 'img/codewolf_small.png', 'alt' => 'The code wolf girl that appears on Dr. Seranges Custom Screen Printed shirts'],
                         ],
@@ -228,17 +276,19 @@ EOF;
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Another Adventure Game',
-                    'assignment' => '',
-                    'description' => '',
+                    'assignment' => $this->adventure_assignment,
+                    'description' => $this->adventure_description,
                     'links' => (object) [
                         (object) ['url' => 'https://github.com/um-game/Another-Adventure-Game', 'class' => 'github',],
+                        (object) ['url' => asset('files/Another Adventure Game Design Document.pdf'), 'class' => 'file', 'name' => 'Design Document',],
+                        (object) ['url' => 'https://github.com/um-game/Another-Adventure-Game/raw/master/final.zip', 'class' => 'github', 'name' => 'Final Build',],
                     ]
                 ],
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Software Optimization Projects',
-                    'assignment' => '',
-                    'description' => '',
+                    'assignment' => $this->opt_assignment,
+                    'description' => $this->opt_description,
                     'links' => (object) [
                         (object) ['url' => 'https://github.com/falkzach/CSCI595-Software-Optimization', 'class' => 'github',],
                     ],
@@ -264,14 +314,12 @@ EOF;
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'miniML',
-                    'assignment' => '',
+                    'assignment' => 'miniML was a research project I worked on with fellow grad student David Blasen under the directive of Dr. Rob Smith.',
                     'description' => '',
                     'links' =>  [
                         (object) ['url' => 'https://github.com/optimusmoose/miniML', 'class' => 'github',]
                     ]
                 ],
-
-
             ],
 
             'research' => [

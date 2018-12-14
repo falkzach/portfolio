@@ -7,33 +7,45 @@
             <h2>Education</h2>
             <ul>
                 @foreach($degrees as $degree)
-                    <li>{{$degree->name}}, {{$degree->institution}}, {{$degree->year}}</li>
+                    <li>
+                        <h3>{{$degree->name}}</h3>
+                        <p class="lead">{{$degree->institution}}, {{$degree->year}}</p>
+                    </li>
                 @endforeach
             </ul>
         </div>
         <div class="">
             <h2>Research</h2>
             <p class="lead">{!! $research->headline !!}</p>
-            @foreach($research->projects as $project)
-                <h3>{{$project->name}}</h3>
-                <p class="lead">{{$project->description}}</p>
-            @endforeach
+            <ul>
+                @foreach($research->projects as $project)
+                    <li>
+                        <h3>{{$project->name}}</h3>
+                        <p class="lead">{{$project->description}}</p>
+                    </li>
+                @endforeach
+            </ul>
         </div>
         <div class="">
             <h2>Teaching</h2>
             <p class="lead">{!! $teaching->headline !!}</p>
-            @foreach($teaching->courses as $course)
-                <h3>{{$course->name}}</h3>
-                <p>{!! $course->description !!}</p>
-            @endforeach
+            <ul>
+                @foreach($teaching->courses as $course)
+                    <li>
+                        <h3>{{$course->name}}</h3>
+                        <p class="lead">{{$course->instructor}}, {{$course->semester}}</p>
+                        <p>{!! $course->description !!}</p>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+        <div class="">
+            <h2>Guiding for the Outdoor Program</h2>
+            <pre class="text-light">{!! $guiding !!}</pre>
         </div>
         <div class="">
             <h2>Reflections</h2>
             <pre class="text-light">{!! $reflections !!}</pre>
-        </div>
-        <div class="">
-            <h2>Outdoor Guiding</h2>
-            <pre class="text-light">{!! $guiding !!}</pre>
         </div>
     </div>
 
