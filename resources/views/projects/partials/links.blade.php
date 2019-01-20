@@ -3,4 +3,5 @@
         <span class="fa fa-{{$link->class}}"></span>
         {{ isset($link->name)?$link->name:$project->name}}
     </a>
+    {!! isset($link->tooltip)?"<p>" . $link->tooltip . "</p>":""!!}
 @endforeach

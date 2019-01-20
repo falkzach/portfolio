@@ -29,7 +29,7 @@ class ProjectRepository
     {
         $this->compilers_assignment =
 <<<EOF
-This project was an independent study I undertook my final semester at the University of Montana Under the Supervision of <a href='https://alg.cs.umt.edu/index.html' target="_blank">Dr. Oliver Serange</a>.
+This project was an independent study I undertook my final semester at the University of Montana Under the Supervision of <a href='https://alg.cs.umt.edu/index.html' target="_blank">Dr. Oliver Serang</a>.
 The objective was to refine a modern compilers curriculum using flex and bison and modern C++. This comprised of five assignments:
 <ol class="text-left">
 <li>Basic: In order to understand flex, write a basic lexer that can identify integers and alpha-only strings</li>
@@ -48,10 +48,8 @@ Working on this project I learned how to write lexical analyzers using <a href="
 Moreover I developed an understanding and appriciation for how more complex compilers such as gcc/g++ and interpreters such as python operate and why certain syntactial decisions are made.
 I am proud to say that I was able to produce a functioning compiler free of any<a href="https://www.gnu.org/software/bison/manual/html_node/Shift_002fReduce.html" target="_blank">Shift Reduce Conflicts</a>, and am particularly proud of tackling the x86_64 assembly (TODO: it's broken finish it).
 If I could do things differently on this project I would: 1. add more functionality and optimizations !here is so much more to learn I have barley scratched the surface. and 2. when working on the assembly translator, gone straight to reverse engineering gcc with -S.
-<br />
-The code for this resides in a repository owned by Dr. Serange. As it is the basis for a course I am not at liberty to share it publicly.
-I can include a small snippet of Bison Grammar from my Assembly Translator. Please contact myself or Dr. Serange for more information on this compilers course.
 EOF;
+        $this->compilers_link_tooltip = "The code for this resides in a repository owned by Dr. Serang. As it is the basis for a course I am not at liberty to share it publicly.";
 
         $this->compilers_snippet =
             <<<EOF
@@ -86,7 +84,7 @@ EOF;
 
         $this->fffap_assignment =
 <<<EOF
-This was one of three competition challenge problems presented to the graduate Students by Dr. Oliver Serange as a part of his Introduction to Bioinformatics course (Autumn 2018).
+This was one of three competition challenge problems presented to the graduate Students by Dr. Oliver Serang as a part of his Introduction to Bioinformatics course (Autumn 2018).
 Though I completed an implementation for each of the challenges, I just so happened to win this competition with both the fastest algorithm, but the only algorithm to provide correct reconstruction on large input sets. For this I joined the exclusive shirt club.
 
 <a href="https://alg.cs.umt.edu/lectures.html" target="_blank">From algs.cs.umt.edu/lectures</a>
@@ -205,7 +203,7 @@ EOF;
 
     $this->opt_assignment =
 <<<EOF
-The objective of Dr. Oliver Serange's Software Optimization Course is simple. Make things go faster.
+The objective of Dr. Oliver Serang's Software Optimization Course is simple. Make things go faster.
 Why? Because it's there. Because we can. Because we need to. The same reason we climb mountains.
 For this course three optimization problems were presented by Dr. Serang, in the format of a friendly competition.
 The rules are simple, matching the reference output is all that matters for the grade, submit the trivial solution. But the fastest implementation takes the custom screen printed shirt...
@@ -267,16 +265,18 @@ EOF;
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Introduction to Compilers',
+                    'course' => '',
                     'assignment' => $this->compilers_assignment,
                     'description' => $this->compilers_description,
                     'links' => (object) [
-                        (object) ['url' => 'https://bitbucket.org/orserang/intro-compiler-design', 'class' => 'bitbucket',],
+                        (object) ['url' => 'https://bitbucket.org/orserang/intro-compiler-design', 'class' => 'bitbucket', 'tooltip' => $this->compilers_link_tooltip],
                     ],
                     'snippets' => [$this->compilers_snippet]
                 ],
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Fairly Fast Fragment Assembly Program',
+                    'course' => '',
                     'assignment' => $this->fffap_assignment,
                     'description' => $this->fffap_description,
                     'links' => (object) [
@@ -285,12 +285,13 @@ EOF;
                     ],
                     'snippets' => [$this->fffap_snippet_0, $this->fffap_snippet_1, $this->fffap_snippet_2],
                     'images' => [
-                        (object) ['key' => 0, 'src' => 'img/codewolf_small.png', 'alt' => 'The code wolf girl that appears on Dr. Seranges Custom Screen Printed shirts'],
+                        (object) ['key' => 0, 'src' => 'img/codewolf_small.png', 'alt' => 'The code wolf girl that appears on Dr. Serangs Custom Screen Printed shirts'],
                         ],
                 ],
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Another Adventure Game',
+                    'course' => '',
                     'assignment' => $this->adventure_assignment,
                     'description' => $this->adventure_description,
                     'links' => (object) [
@@ -302,6 +303,7 @@ EOF;
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Software Optimization Projects',
+                    'course' => '',
                     'assignment' => $this->opt_assignment,
                     'description' => $this->opt_description,
                     'links' => (object) [
@@ -311,6 +313,7 @@ EOF;
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Bike Thing',
+                    'course' => '',
                     'assignment' => '',
                     'description' => '',
                     'links' => (object) [
@@ -320,6 +323,7 @@ EOF;
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Simulation Modeling Assignments',
+                    'course' => '',
                     'assignment' => '',
                     'description' => '',
                     'links' => (object) [
@@ -329,7 +333,8 @@ EOF;
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'miniML',
-                    'assignment' => 'miniML was a research project I worked on with fellow grad student David Blasen under the directive of Dr. Rob Smith.',
+                    'course' => '',
+                    'assignment' => 'miniML was a research project I worked on with fellow grad student David Blasen under the directive of Dr. Rob Smith. The objective was to create a machine learning GUI utility built over weka to find optimal features and parameters with the constraint of limiting runtime.',
                     'description' => '',
                     'links' =>  [
                         (object) ['url' => 'https://github.com/optimusmoose/miniML', 'class' => 'github',]
@@ -338,6 +343,7 @@ EOF;
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Substance Abuse Risk Classified by Quantized Personality Evaluation',
+                    'course' => '',
                     'assignment' => $this->ml_assignment,
                     'description' => $this->ml_description,
                     'links' => (object) [
