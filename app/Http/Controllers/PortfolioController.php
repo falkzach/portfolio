@@ -80,19 +80,19 @@ EOF;
 
         $data = [
             'degrees' => (object) [
-                (object) ['name' => 'Bachelor\'s of Science in Computer Science', 'year' => '2016', 'institution' => 'University of Montana',],
-                (object) ['name' => 'Master\'s of Science in Computer Science', 'year' => '2018', 'institution' => 'University of Montana'],
+                (object) ['name' => 'Master\'s of Science in Computer Science', 'year' => '2018', 'gpa' => '3.7', 'institution' => 'University of Montana'],
+                (object) ['name' => 'Bachelor\'s of Science in Computer Science', 'year' => '2016', 'gpa' => '3.4', 'institution' => 'University of Montana',],
             ],
             'research' => (object) [
-                'headline' => 'In addition to my Teaching, I also contributed to a couple of research projects, primarily as a developer.',
+                'headline' => 'In addition to my Teaching, I also contributed to a couple of research projects during my time at the University of Montana, primarily as a developer and consultant.',
                 'projects' => [
                     (object) ['name' => 'FS Air Quality Monitoring', 'description' => 'I am presently engaged in some light consulting with the Forest Service in order to model air quality from a variety of distributed data collection networks. My work here is limited to providing expertise on implementation of data processing and modeling pipelines in exchange for frosty beverages.'],
-                    (object) ['name' => 'NTSG Landsat Ground-cover Classification', 'description' => '...'],
+                    (object) ['name' => 'NTSG Landsat Ground-cover Classification', 'description' => 'In the Summer of 2017 I worked to develop a Random Feature and Parameter search for both classical Random Forest models as well as a TensorFlow Deep Neural Networks for the NTSG with the goal of producing more accurate land coverage maps based on satellite data. I delivered the search tool as well as some preliminary feature and parameter best first search results.'],
                     (object) ['name' => 'miniML', 'description' => 'miniML was a research project I worked on with fellow grad student David Blasen under the directive of Dr. Rob Smith. The objective was to create a machine learning GUI utility built over weka to find optimal features and parameters with the constraint of limiting runtime.'],
                 ],
             ],
             'teaching' => (object) [
-                'headline' => 'For four of the five semester of my graduate studies I had the privilege of serving the Computer Science Department as a Teaching Assistant. While my role would varry based on course and instructor, I like to beleive that I was an asset to my students. While office hours were scheduled regularly, I strived to maintain a welcoming, open door environment.',
+                'headline' => 'For four of the five semester of my graduate studies I had the privilege of serving the Computer Science Department as a Teaching Assistant. While my role would vary based on course and instructor, I like to beleive that I was an asset to my students. I strive to maintain a welcoming, open office environment and to maintain high availability to my students.',
                 'courses' => [
                     (object) ['name' => 'CSCI 315E - Computers, Ethics, and Society', 'instructor' => 'Dr. Joel Henry', 'semester' => 'Autumn 2017', 'description' => 'This course explores the ethical problems that computer scientists face; The codes of ethics of professional computing societies; the social implications of computers, computing, and other digital technologies. The course also serves as the departments upper division writing course. My role was primarily to grade and provide feedback on students papers though I did cover a couple of lectures while Dr. Henry was traveling.'],
                     (object) ['name' => 'CSCI 426 - Advanced Programming Theory and Practice', 'instructor' => 'Dr. Joel Henry', 'semester' => 'Autumn 2017', 'description' => 'This course, at the time, explored advanced software engineering principals, in particular deisgn patters, their use and implementation, and software complexity. My role was primarily bookkeeping and too act as an additional resource when students needed help. Again I covered lecture sections while Dr. Henry was away.'],

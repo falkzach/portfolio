@@ -9,8 +9,13 @@
             <ul>
                 @foreach($degrees as $degree)
                     <li>
-                        <h3>{{$degree->name}}</h3>
-                        <p class="lead">{{$degree->institution}}, {{$degree->year}}</p>
+                        <div>
+                            <h3>{{$degree->name}}</h3>
+                            <div class="col-3">
+                                <p class="lead pull-left">{{$degree->institution}}, {{$degree->year}}</p>
+                                <p class="lead pull-right">{{ $degree->gpa }} GPA</p>
+                            </div>
+                        </div>
                     </li>
                 @endforeach
             </ul>

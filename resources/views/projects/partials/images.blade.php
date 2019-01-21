@@ -1,5 +1,5 @@
 @if(isset($project->images))
-    <div id="{{ $project->name }}-carousel" class="carousel slide" data-ride="carousel">
+    <div id="{{ $project->name }}-carousel" class="carousel slide text-center" data-ride="carousel">
         <ol class="carousel-indicators">
             @foreach($project->images as $key => $image)
                 <li data-target="#{{ $project->name }}-carousel" data-slide-to="0" class="<?=$key===0?'active':''?>"></li>

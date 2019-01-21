@@ -3,9 +3,6 @@
 
 class ProjectRepository
 {
-    /**
-     * @var Project
-     */
     private $compilers_assignment;
     private $compilers_description;
     private $compilers_snippet;
@@ -16,11 +13,20 @@ class ProjectRepository
     private $fffap_snippet_1;
     private $fffap_snippet_2;
 
+    private $adventure_assignment;
+    private $adventure_description;
+
     private $opt_assignment;
     private $opt_description;
 
-    private $adventure_assignment;
-    private $adventure_description;
+    private $bike_thing_assignment;
+    private $bike_thing_description;
+
+    private $sim_assignment;
+    private $sim_description;
+
+    private $miniML_assignment;
+    private $miniML_description;
 
     private $ml_assignment;
     private $ml_description;
@@ -28,7 +34,7 @@ class ProjectRepository
     public function __construct()
     {
         $this->compilers_assignment =
-<<<EOF
+            <<<EOF
 This project was an independent study I undertook my final semester at the University of Montana Under the Supervision of <a href='https://alg.cs.umt.edu/index.html' target="_blank">Dr. Oliver Serang</a>.
 The objective was to refine a modern compilers curriculum using flex and bison and modern C++. This comprised of five assignments:
 <ol class="text-left">
@@ -83,7 +89,7 @@ atomicExpression:
 EOF;
 
         $this->fffap_assignment =
-<<<EOF
+            <<<EOF
 This was one of three competition challenge problems presented to the graduate Students by Dr. Oliver Serang as a part of his Introduction to Bioinformatics course (Autumn 2018).
 Though I completed an implementation for each of the challenges, I just so happened to win this competition with both the fastest algorithm, but the only algorithm to provide correct reconstruction on large input sets. For this I joined the exclusive shirt club.
 
@@ -123,7 +129,7 @@ The student with the best alignment to my secret, original string will be decide
 If you want to improve your performance when testing, here is a C++ Needleman-Wunsch implementation and a python program to draw a heatmap from your pass-through score matrix (which the C++ program outputs to stdout).
 EOF;
         $this->fffap_description =
-<<<EOF
+            <<<EOF
 My implementation for this problem generates a graph of directed edges from a node who's suffix is the prefix of the destination node with a weight of the number of overlapping characters.
 In addition a metagraph is kept tracking overlap weights to edges.
 Those edges are then greedily consumed to construct a hamiltonian path.
@@ -144,7 +150,7 @@ EOF;
 
 
         $this->fffap_snippet_0 =
-<<<EOF
+            <<<EOF
 
 fragments:
 TTACCA
@@ -170,7 +176,7 @@ AATTACCAGG
 EOF;
 
         $this->fffap_snippet_1 =
-<<<EOF
+            <<<EOF
 
 relevent fragments:
 ATTACCAATT
@@ -182,7 +188,7 @@ AATTACCAGG
 EOF;
 
         $this->fffap_snippet_2 =
-<<<EOF
+            <<<EOF
 
 ./assemble.o fragments.txt
 0:      3(5),   4(7),   5(4),
@@ -201,8 +207,8 @@ GATTA
 GATTACCAATTACCAGGA
 EOF;
 
-    $this->opt_assignment =
-<<<EOF
+        $this->opt_assignment =
+            <<<EOF
 The objective of Dr. Oliver Serang's Software Optimization Course is simple. Make things go faster.
 Why? Because it's there. Because we can. Because we need to. The same reason we climb mountains.
 For this course three optimization problems were presented by Dr. Serang, in the format of a friendly competition.
@@ -217,25 +223,55 @@ In addition several optimizations were demonstrated and evaluated in smaller wee
 The book for this course is freely available thanks to Dr. Serang: <a href="https://alg.cs.umt.edu/media/serang-code-optimization-in-c++11.pdf" target="_blank">Code Optimizations In C++11</a>
 EOF;
 
-    $this->opt_description =
-<<<EOF
+        $this->opt_description =
+            <<<EOF
 While I was not declared victor for any of the three competitions, I was always a top contender. More importantly I became versed in the dark arts of bit twiddling
 I found this class to be both incredibly rewarding and challenging and am fond of the friendly competition format. Each assignment forced me push further develop and flex my C++ skills and as a result it has become my favorite language.
 EOF;
 
-    $this->adventure_assignment =
-<<<EOF
+        $this->adventure_assignment =
+            <<<EOF
 The assignment for this project was simple. Design and implement a mobile application or game.
 This was a group project completed with classmates Kyle Lucke, Adam Clemons, and Cameron Gomke and we elected to build a game using the <a href="https://unity3d.com/" target="_blank">Unity Game Engine</a>.
 EOF;
 
         $this->adventure_description =
-<<<EOF
+            <<<EOF
 Another Adventure game is yet another 2d top down roll playing game. A story of keeping up on laundry. Of clean pants and algorithms homework.
 It looks like a corny Zelda clone (because we "borrowed" sprites for prototyping) but it actually has some interesting and unique mechanics including procedurally generated random dungeons and synergystic item sets.
 I played key roles in UI design, low fidelity mockups, as well as use case analysis and storyboarding.
 Implementation the procedurally generated dungeons was my primary coding role on this project. In addition I also implemented some basic start game tutorial functionality.
 While only a prototype I find it quite satisfying running about the mazes created by my dungeon generator, complete with randomly placed enemies, obstacles, treasures, egress and ingress.
+EOF;
+
+        $this->bike_thing_assignment =
+            <<<EOF
+
+EOF;
+
+        $this->bike_thing_description =
+            <<<EOF
+
+EOF;
+
+        $this->sim_assignment =
+            <<<EOF
+
+EOF;
+
+        $this->sim_description =
+            <<<EOF
+
+EOF;
+
+        $this->miniML_assignment =
+            <<<EOF
+miniML was a research project I worked on with fellow grad student David Blasen under the directive of Dr. Rob Smith. The objective was to create a machine learning GUI utility built over weka to find optimal features and parameters with the constraint of limiting runtime.
+EOF;
+
+        $this->miniML_description =
+            <<<EOF
+Because weka was the target backend the applicationw as build in Java, originally in Swing and later moved to JavaFX. 
 EOF;
 
         $this->ml_assignment =
@@ -247,25 +283,17 @@ EOF;
 <<<EOF
 
 EOF;
-
-
-
-
-
-
-
     }
 
     public function getAll()
     {
         $p_id = 0;
-        $r_id = 0;
         $data = [
             'projects' => [
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Introduction to Compilers',
-                    'course' => '',
+                    'course' => 'CSCI592 - Independent Study',
                     'assignment' => $this->compilers_assignment,
                     'description' => $this->compilers_description,
                     'links' => (object) [
@@ -276,7 +304,7 @@ EOF;
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Fairly Fast Fragment Assembly Program',
-                    'course' => '',
+                    'course' => 'CSCI558 - Intro to Bioinformatics',
                     'assignment' => $this->fffap_assignment,
                     'description' => $this->fffap_description,
                     'links' => (object) [
@@ -291,7 +319,7 @@ EOF;
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Another Adventure Game',
-                    'course' => '',
+                    'course' => 'CSCI412 - Game and Mobile Application Design',
                     'assignment' => $this->adventure_assignment,
                     'description' => $this->adventure_description,
                     'links' => (object) [
@@ -303,7 +331,7 @@ EOF;
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Software Optimization Projects',
-                    'course' => '',
+                    'course' => 'CSCI595 - Software Optimization',
                     'assignment' => $this->opt_assignment,
                     'description' => $this->opt_description,
                     'links' => (object) [
@@ -313,9 +341,9 @@ EOF;
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Bike Thing',
-                    'course' => '',
-                    'assignment' => '',
-                    'description' => '',
+                    'course' => 'CSCI595 - Internet of Things',
+                    'assignment' => $this->bike_thing_assignment,
+                    'description' => $this->bike_thing_description,
                     'links' => (object) [
                         (object) ['url' => 'https://github.com/um-iot/IoT-bike-thing', 'class' => 'github',]
                     ],
@@ -323,9 +351,9 @@ EOF;
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Simulation Modeling Assignments',
-                    'course' => '',
-                    'assignment' => '',
-                    'description' => '',
+                    'course' => 'CSCI477 - Simulation',
+                    'assignment' => $this->sim_assignment,
+                    'description' => $this->sim_description,
                     'links' => (object) [
                         (object) ['url' => 'https://github.com/falkzach/CSCI557-Simulation-Modeling', 'class' => 'github',],
                     ],
@@ -333,9 +361,9 @@ EOF;
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'miniML',
-                    'course' => '',
-                    'assignment' => 'miniML was a research project I worked on with fellow grad student David Blasen under the directive of Dr. Rob Smith. The objective was to create a machine learning GUI utility built over weka to find optimal features and parameters with the constraint of limiting runtime.',
-                    'description' => '',
+                    'course' => 'CSCI444 - Data Visualization',
+                    'assignment' => $this->miniML_assignment,
+                    'description' => $this->miniML_description,
                     'links' =>  [
                         (object) ['url' => 'https://github.com/optimusmoose/miniML', 'class' => 'github',]
                     ]
@@ -343,7 +371,7 @@ EOF;
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Substance Abuse Risk Classified by Quantized Personality Evaluation',
-                    'course' => '',
+                    'course' => 'CSCI547 - Machine Learning',
                     'assignment' => $this->ml_assignment,
                     'description' => $this->ml_description,
                     'links' => (object) [
@@ -354,42 +382,34 @@ EOF;
                     ],
                 ],
             ],
-
-            'research' => [
-                (object) [
-                    'id' => ++$r_id,
-                    'name' => '',
-                    'description' => '',
-                ],
-            ]
         ];
         return $data;
     }
 
-    public function getSAIT() {
-        //        $data= [
+//    public function getSAIT() {
+//                $data= [
 //                'SAIT_APPS' => [
-////                'Food Zoo Menu',
-////                'Student Hiring',
-////                'Bus Tracker',
-////                'Girz Card Photos',
-////                'Scheduled Email',
-////                'Campus Hours',
-////                'Directory API',
-////                'Comment and Attachment API',
-////                'UM Mobile App'
-////                //legacy
-////                'DCO Home',//keep
-////                'Email Queue',
-////                'Merchant Map',//keep
-////                'Hall Snacks',
-////                'Bear Hugs',
-////                'Game Room Table Timers',
-////                'RLO Discipline Database',
-////                'RLO Duty Log',
-////                'Renter Center Housing',
-////                'Renter Center Landlord Review',
+//                'Food Zoo Menu',
+//                'Student Hiring',
+//                'Bus Tracker',
+//                'Girz Card Photos',
+//                'Scheduled Email',
+//                'Campus Hours',
+//                'Directory API',
+//                'Comment and Attachment API',
+//                'UM Mobile App'
+//                //legacy
+//                'DCO Home',//keep
+//                'Email Queue',
+//                'Merchant Map',//keep
+//                'Hall Snacks',
+//                'Bear Hugs',
+//                'Game Room Table Timers',
+//                'RLO Discipline Database',
+//                'RLO Duty Log',
+//                'Renter Center Housing',
+//                'Renter Center Landlord Review',
 //                ]
 //        ];
-    }
+//    }
 }
