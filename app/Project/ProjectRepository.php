@@ -55,6 +55,7 @@ Moreover I developed an understanding and appriciation for how more complex comp
 I am proud to say that I was able to produce a functioning compiler free of any<a href="https://www.gnu.org/software/bison/manual/html_node/Shift_002fReduce.html" target="_blank">Shift Reduce Conflicts</a>, and am particularly proud of tackling the x86_64 assembly (TODO: it's broken finish it).
 If I could do things differently on this project I would: 1. add more functionality and optimizations !here is so much more to learn I have barley scratched the surface. and 2. when working on the assembly translator, gone straight to reverse engineering gcc with -S.
 EOF;
+
         $this->compilers_link_tooltip = "The code for this resides in a repository owned by Dr. Serang. As it is the basis for a course I am not at liberty to share it publicly.";
 
         $this->compilers_snippet =
@@ -128,6 +129,7 @@ The student with the best alignment to my secret, original string will be decide
 
 If you want to improve your performance when testing, here is a C++ Needleman-Wunsch implementation and a python program to draw a heatmap from your pass-through score matrix (which the C++ program outputs to stdout).
 EOF;
+
         $this->fffap_description =
             <<<EOF
 My implementation for this problem generates a graph of directed edges from a node who's suffix is the prefix of the destination node with a weight of the number of overlapping characters.
@@ -147,7 +149,6 @@ This implementation leans on a few key assumptions
 
 It does alright.
 EOF;
-
 
         $this->fffap_snippet_0 =
             <<<EOF

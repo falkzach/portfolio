@@ -1,5 +1,5 @@
 @if(isset($project->snippets))
-    <div class="col-8 offset-2">
+    <div class="col-8 text-center">
         @foreach($project->snippets as $snippet)
             <pre><code class="hljs">
                 {!! $snippet !!}

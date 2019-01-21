@@ -1,4 +1,4 @@
-<div class="col-6">
+<div class="col-8">
     @foreach($project->links as $link)
         <a href="{{$link->url}}" target="_blank" class="btn btn-social btn-{{$link->class}} btn-secondary m-1">
             <span class="fa fa-{{$link->class}}"></span>
