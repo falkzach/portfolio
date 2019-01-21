@@ -16,18 +16,6 @@
             </ul>
         </div>
         <div class="">
-            <h2>Research</h2>
-            <p class="lead">{!! $research->headline !!}</p>
-            <ul>
-                @foreach($research->projects as $project)
-                    <li>
-                        <h3>{{$project->name}}</h3>
-                        <p class="lead">{{$project->description}}</p>
-                    </li>
-                @endforeach
-            </ul>
-        </div>
-        <div class="">
             <h2>Teaching</h2>
             <p class="lead">{!! $teaching->headline !!}</p>
             <ul>
@@ -36,6 +24,18 @@
                         <h3>{{$course->name}}</h3>
                         <p class="lead">{{$course->instructor}}, {{$course->semester}}</p>
                         <p>{!! $course->description !!}</p>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+        <div class="">
+            <h2>Research</h2>
+            <p class="lead">{!! $research->headline !!}</p>
+            <ul>
+                @foreach($research->projects as $project)
+                    <li>
+                        <h3>{{$project->name}}</h3>
+                        <p class="lead">{{$project->description}}</p>
                     </li>
                 @endforeach
             </ul>

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark nav-masthead">
-    <a class="navbar-brand" href="#"><h3>{{ config('portfolio.handle') }}</h3></a>
+    <a class="navbar-brand" href="{{ route('portfolio_index') }}"><h3>{{ config('portfolio.handle') }}</h3></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
