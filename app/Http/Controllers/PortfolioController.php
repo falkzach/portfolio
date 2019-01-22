@@ -84,11 +84,11 @@ EOF;
                 (object) ['name' => 'Bachelor\'s of Science in Computer Science', 'year' => '2016', 'gpa' => '3.4', 'institution' => 'University of Montana',],
             ],
             'research' => (object) [
-                'headline' => 'In addition to my Teaching, I also contributed to a couple of research projects during my time at the University of Montana, primarily as a developer and consultant.',
+                'headline' => 'In addition to my Teaching I contributed to a couple of research projects during my time at the University of Montana, primarily as a developer and consultant.',
                 'projects' => [
                     (object) ['name' => 'FS Air Quality Monitoring', 'description' => 'I am presently engaged in some light consulting with the Forest Service in order to model air quality from a variety of distributed data collection networks. My work here is limited to providing expertise on implementation of data processing and modeling pipelines in exchange for frosty beverages.'],
                     (object) ['name' => 'NTSG Landsat Ground-cover Classification', 'description' => 'In the Summer of 2017 I worked to develop a Random Feature and Parameter search for both classical Random Forest models as well as a TensorFlow Deep Neural Networks for the NTSG with the goal of producing more accurate land coverage maps based on satellite data. I delivered the search tool as well as some preliminary feature and parameter best first search results.'],
-                    (object) ['name' => 'miniML', 'description' => 'miniML was a research project I worked on with fellow grad student David Blasen under the directive of Dr. Rob Smith. The objective was to create a machine learning GUI utility built over weka to find optimal features and parameters with the constraint of limiting runtime.'],
+                    (object) ['name' => 'miniML', 'description' => 'miniML was a research project I worked on with fellow grad student David Blasen under the directive of Dr. Rob Smith. The objective was to create a machine learning GUI utility built over weka to find optimal features with the constraint of limiting runtime.'],
                 ],
             ],
             'teaching' => (object) [

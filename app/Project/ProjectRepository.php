@@ -247,32 +247,38 @@ EOF;
 
         $this->bike_thing_assignment =
             <<<EOF
-
+The Assignment in Jesse Johnsons Internet of Things (aka wifi enabled embeded systems) was simple, build an IoT device.
 EOF;
 
         $this->bike_thing_description =
             <<<EOF
+Me and my room mate and partner for this assignment are both avid mountain bikers. Avid (adjective) having or showing a keen interest in or enthusiasm for something. Just to be clear. I said avid, not good. We like to use <a href="https://www.strava.com/" alt="Strava Homepage">Strava</a> to track our trail riding and progression.
+
 
 EOF;
 
         $this->sim_assignment =
             <<<EOF
+Jesse Johnson's Simulation and Modeling course explores two major topics, ordinary and partial differential equations. Furthermore it explores the underlying numerical methods for differential integration, their implementation, and their use to simulate physics.
 
+The final assignment (exam) was to use the numerical method of lines, which uses both partial and differential equations, to simulate the heating of a teak kettle on a circular element.
 EOF;
 
         $this->sim_description =
             <<<EOF
-
+A complete description of this problem as well as my implementation can be found in the Jupyter Notebook on github.
 EOF;
 
         $this->miniML_assignment =
             <<<EOF
-miniML was a research project I worked on with fellow grad student David Blasen under the directive of Dr. Rob Smith. The objective was to create a machine learning GUI utility built over weka to find optimal features and parameters with the constraint of limiting runtime.
+miniML was a research project I worked on with fellow grad student David Blasen under the directive of Dr. Rob Smith. The objective was to create a machine learning GUI utility built over Weka to find optimal features with the constraint of limiting runtime.
 EOF;
 
         $this->miniML_description =
             <<<EOF
-Because weka was the target backend the applicationw as build in Java, originally in Swing and later moved to JavaFX. 
+Because Weka was the target backend the application was build in Java, originally in the Swing library and later moved to JavaFX. The application allowed for a user to select a dataset and a time constraint and would run a random feature search on 4 machine learning algorithms (Linear Regression, Decision Tree, Support Vector Machine, and Neural Network) and provide the best possible model explored within the constrained time. The hope was that such a utility could be helpful for learning applications with stringent deadlines.
+
+A woeful exercise in over-engineered Java, I was responsible for writing the main application which centered around a State Pattern as well as the GUI while Dave wrote the random feature search, threading model, and consumption of the Weka api.
 EOF;
 
         $this->ml_assignment =
@@ -320,7 +326,7 @@ EOF;
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Another Adventure Game',
-                    'course' => 'CSCI412 - Game and Mobile Application Design',
+                    'course' => 'CSCI412 - Game and Mobile Applications',
                     'assignment' => $this->adventure_assignment,
                     'description' => $this->adventure_description,
                     'links' => (object) [
@@ -352,11 +358,18 @@ EOF;
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Simulation Modeling Assignments',
-                    'course' => 'CSCI477 - Simulation',
+                    'course' => 'CSCI477 - Simulation and Modeling',
                     'assignment' => $this->sim_assignment,
                     'description' => $this->sim_description,
                     'links' => (object) [
                         (object) ['url' => 'https://github.com/falkzach/CSCI557-Simulation-Modeling', 'class' => 'github',],
+                        (object) ['url' => 'https://github.com/falkzach/CSCI557-Simulation-Modeling/blob/master/final_exam/Final%20Exam-Falkner.ipynb', 'class' => 'github', 'name'=> 'Final Exam: Tea Kettle Simulation'],
+                    ],
+                    'images' => [
+                        (object) ['key' => 0, 'src' => 'img/projects/sim_0.png', 'alt' => 'Tea kettle simulation at 0.0 seconds'],
+                        (object) ['key' => 0, 'src' => 'img/projects/sim_1.png', 'alt' => 'Tea kettle simulation at 5.5 seconds'],
+                        (object) ['key' => 0, 'src' => 'img/projects/sim_2.png', 'alt' => 'Tea kettle simulation at 8.3 seconds'],
+                        (object) ['key' => 0, 'src' => 'img/projects/sim_3.png', 'alt' => 'Tea kettle simulation at 11.1 seconds'],
                     ],
                 ],
                 (object) [
@@ -376,7 +389,7 @@ EOF;
                     'assignment' => $this->ml_assignment,
                     'description' => $this->ml_description,
                     'links' => (object) [
-                        (object) ['url' => 'https://github.com/falkzach', 'class' => 'github',],
+                        (object) ['url' => 'https://github.com/falkzach/CSCI547-Machine-Learning/blob/master/Project/explore_consumption.py', 'class' => 'github',],
                         (object) ['url' => asset('files/ml_assignment.pdf'), 'class' => 'file', 'name' => 'Assignment',],
                         (object) ['url' => asset('files/falkner_substance_abuse_classification.pdf'), 'class' => 'file', 'name' => 'Report',],
 
