@@ -11,7 +11,7 @@
                     <li class="list-inline-item py-1 border-bottom">
                         <div>
                             <h3>{{$degree->name}}</h3>
-                            <div class="col-6">
+                            <div class="">
                                 <p class="lead">{{$degree->institution}}, {{$degree->year}}</p>
                                 <p class="lead">{{ $degree->gpa }} GPA</p>
                                 @if(isset($degree->courses))
