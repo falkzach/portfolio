@@ -134,17 +134,17 @@ EOF;
             <<<EOF
 My implementation for this problem generates a graph of directed edges from a node who's suffix is the prefix of the destination node with a weight of the number of overlapping characters.
 In addition a metagraph is kept tracking overlap weights to edges.
-Those edges are then greedily consumed to construct a hamiltonian path.
+Those edges are then greedily consumed to construct a Hamiltonian path.
 Finally the path is walked and a result sequence constructed based on the path and tracked overlaps.
-The input size is reduce by eliminating fragments that are pure substrigns of other fragments.
+The input size is reduce by eliminating fragments that are pure substrings of other fragments.
 
-Open MP pragmas are included to signifigantly increase performance on large input sets.
+Open MP pragmas are included to significantly increase performance on large input sets.
 
 This implementation leans on a few key assumptions
 1.) that the fragments provide full coverage of the original sequence
 2.) that fragments which are pure substrings of other fragments provide no extra information
-     - while this may not be true, leaning on signifigant over coverage (see 1) makes this acceptable
-     - working under this assumption, the size of the input set can be signfigently reduce before construction of the graph
+     - while this may not be true, leaning on significant over coverage (see 1) makes this acceptable
+     - working under this assumption, the size of the input set can be significantly reduce before construction of the graph
 3.) that greedy consumption of edges will provide an ideal reconstruction of the sequence
 
 It does alright.
@@ -213,7 +213,7 @@ EOF;
 The objective of Dr. Oliver Serang's Software Optimization Course is simple. Make things go faster.
 Why? Because it's there. Because we can. Because we need to. The same reason we climb mountains.
 For this course three optimization problems were presented by Dr. Serang, in the format of a friendly competition.
-The rules are simple, matching the reference output is all that matters for the grade, submit the trivial solution. But the fastest implementation takes the custom screen printed shirt...
+The rules are simple, matching the reference output is all that matters for the grade, submit the trivial solution. But the fastest implementation takes the custom screen-printed shirt...
 These problems consisted of the following:
 <ol>
 <li>Game of Life</li>
@@ -239,7 +239,7 @@ EOF;
         $this->adventure_description =
             <<<EOF
 Another Adventure game is yet another 2d top down roll playing game. A story of keeping up on laundry. Of clean pants and algorithms homework.
-It looks like a corny Zelda clone (because we "borrowed" sprites for prototyping) but it actually has some interesting and unique mechanics including procedurally generated random dungeons and synergystic item sets.
+It looks like a corny Zelda clone (because we "borrowed" sprites for prototyping) but it actually has some interesting and unique mechanics including procedurally generated random dungeons and synergistic item sets.
 I played key roles in UI design, low fidelity mockups, as well as use case analysis and storyboarding.
 Implementation the procedurally generated dungeons was my primary coding role on this project. In addition I also implemented some basic start game tutorial functionality.
 While only a prototype I find it quite satisfying running about the mazes created by my dungeon generator, complete with randomly placed enemies, obstacles, treasures, egress and ingress.
@@ -247,18 +247,18 @@ EOF;
 
         $this->bike_thing_assignment =
             <<<EOF
-The Assignment in Jesse Johnsons experimental Internet of Things (aka wifi enabled embeded systems) was simple, build an IoT device.
+The Assignment in Jesse Johnson’s experimental Internet of Things (aka Wi-Fi enabled embedded systems) was simple, build an IoT device.
 EOF;
 
         $this->bike_thing_description =
             <<<EOF
-Me and my room mate and partner for this assignment are both avid mountain bikers. Avid (adjective) having or showing a keen interest in or enthusiasm for something. Just to be clear. I said avid, not good. We like to use <a href="https://www.strava.com/" alt="Strava Homepage">Strava</a> to track our trail riding and progression. However this requires either your cell phone or a gps device which are often expensive.
-Our objective was to create a gps data logger that could be built for approximately $75, roughly half the cheapest competitor. We based it on the ESP32 platform, a modern System on Chip (SoC) architecture. While we hoped to build it entirely in the esp-idf native framework, however due to our early adoption, using Arduino resulted in a more stable final product. The device can record gps activity and store it on an sd card to later be uploaded to the web. The device also includes a 9DoF gyroscope/altimeter/magnetometer as an additional data source.
+My room mate and partner for this assignment and myself are both avid mountain bikers. Avid (adjective) having or showing a keen interest in or enthusiasm for something. Just to be clear. I said avid, not good. We like to use <a href="https://www.strava.com/" alt="Strava Homepage">Strava</a> to track our trail riding and progression. However this requires either your cell phone or a GPS device which are often expensive.
+Our objective was to create a GPS data logger that could be built for approximately $75, roughly half the cheapest competitor. We based it on the ESP32 platform, a modern System on Chip (SoC) architecture. While we hoped to build it entirely in the esp-idf native framework, however due to our early adoption, using Arduino resulted in a more stable final product. The device can record GPS activity and store it on an sd card to later be uploaded to the web. The device also includes a 9DoF gyroscope/altimeter/magnetometer as an additional data source.
 EOF;
 
         $this->sim_assignment =
             <<<EOF
-Jesse Johnson's Simulation and Modeling course explores two major topics, ordinary and partial differential equations. Furthermore it explores the underlying numerical methods for differential integration, their implementation, and their use to simulate physics.
+Jesse Johnson's Simulation and Modeling course explores two major topics, ordinary and partial differential equations. Furthermore, it explores the underlying numerical methods for differential integration, their implementation, and their use to simulate physics.
 The final assignment (exam) was to use the numerical method of lines, which uses both partial and differential equations, to simulate the heating of a teak kettle on a circular element.
 EOF;
 
@@ -274,21 +274,20 @@ EOF;
 
         $this->miniML_description =
             <<<EOF
-Because Weka was the target backend the application was build in Java, originally in the Swing library and later moved to JavaFX. The application allowed for a user to select a dataset and a time constraint and would run a random feature search on 4 machine learning algorithms (Linear Regression, Decision Tree, Support Vector Machine, and Neural Network) and provide the best possible model explored within the constrained time. The hope was that such a utility could be helpful for learning applications with stringent deadlines.
-
-A woeful exercise in over-engineered Java, I was responsible for writing the main application which centered around a State Pattern as well as the GUI while Dave wrote the random feature search, threading model, and consumption of the Weka api.
+Because Weka was the target backend the application was built in Java, originally in the Swing library and later moved to JavaFX. The application allowed for a user to select a dataset and a time constraint and would run a random feature search on 4 machine learning algorithms (Linear Regression, Decision Tree, Support Vector Machine, and Neural Network) and provide the best possible model explored within the constrained time. The hope was that such a utility could be helpful for learning applications with stringent deadlines.
+A woeful exercise in over-engineered Java, I was responsible for writing the main application which centered around a State Pattern as well as the GUI while Dave wrote the random feature search, threading model, and consumption of the Weka API.
 EOF;
 
         $this->ml_assignment =
 <<<EOF
-The objective of this project was to Identify and implement a machine learning algorithm or to apply an existing implementation to a non trivial dataset. I elected the latter and came across a dataset that correlated substance abuse with measurable personality traits. 
+The objective of this project was to Identify and implement a machine learning algorithm or to apply an existing implementation to a non-trivial dataset. I elected the latter and came across a dataset that correlated substance abuse with measurable personality traits. 
 EOF;
 
         $this->ml_description =
 <<<EOF
 The project attempts to expand on work in done in the paper ”The Five Factor Model of personality and evaluation of drug consumption risk.” The original work did extensive searches over a variety of basic machine learning algorithms to a dataset consisting of demographic information, reporting of substance use, and evaluation of personality traits based on standardized surveys. The original study produced quality results . The plan is to extend this work to a Deep Neural Network Regressor leveraging the Tensorflow library in hopes that its sophistication can reveal deeper subtleties than more basic machine learning algorithms could yield.
-Results were interesting. Forst many substances, these modesl at best produced a guess. however for Caffine, Ketamine, Methadone, VSAs, Heroine and crack all models performed quite well. Of the personality traits, N-Scores (Neurotocism), O-Score(Openness to new experience), and SS (Sensation Seeking) where always present as the prime contributors to the models. Neural networks tened to perform as a coin flip with the exception of the control Semer. I attribute this to lack of Random Parameter Search.
-There seems to be some correlation to neurotocism, openeness to expeience, and sensation seeking and abuse potential for more serious drugs such as Heroine, Crack, and Ketamine. Certainly more data could shine better light on this. More data from a larger demographic could certainly attribute to better models as the sample size was quite small and the distribution of reported users was quite small. Furthermore, time did not allow for large scale feature/parameter subset searches. Applying these searches, particularly to the neural network classifier could produce better results.
+Results were interesting. For many substances, these models at best produced a guess. However for Caffine, Ketamine, Methadone, VSAs, Heroine and crack all models performed quite well. Of the personality traits, N-Scores (Neurotocism), O-Score(Openness to new experience), and SS (Sensation Seeking) where always present as the prime contributors to the models. Neural networks tuned to perform as a coin flip with the exception of the control Semer. I attribute this to lack of Random Parameter Search.
+There seems to be some correlation to neurotocism, openeness to expeience, and sensation seeking and abuse potential for more serious drugs such as Heroine, Crack, and Ketamine. Certainly, more data could shine better light on this. More data from a larger demographic could certainly attribute to better models as the sample size was quite small and the distribution of reported users was quite small. Furthermore, time did not allow for large scale feature/parameter subset searches. Applying these searches, particularly to the neural network classifier could produce better results.
 EOF;
     }
 

@@ -6,9 +6,9 @@
         <h1>Graduate CV</h1>
         <div class="">
             <h2>Education</h2>
-            <ul>
+            <ul class="list-inline row">
                 @foreach($degrees as $degree)
-                    <li>
+                    <li class="list-inline-item py-1 border-bottom">
                         <div>
                             <h3>{{$degree->name}}</h3>
                             <div class="col-6">
@@ -16,9 +16,9 @@
                                 <p class="lead">{{ $degree->gpa }} GPA</p>
                                 @if(isset($degree->courses))
                                     <h4>Courses</h4>
-                                    <ul class="list-unstyled row">
+                                    <ul class="list-inline row">
                                         @foreach($degree->courses as $course)
-                                            <li class="list-item col-5 py-2">{{ $course->course }} - {{ $course->name }}</li>
+                                            <li class="list-inline-item col-5 py-2">{{ $course->course }} - {{ $course->name }}</li>
                                         @endforeach
                                     </ul>
                                 @endif
