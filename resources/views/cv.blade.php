@@ -11,9 +11,17 @@
                     <li>
                         <div>
                             <h3>{{$degree->name}}</h3>
-                            <div class="col-3">
-                                <p class="lead pull-left">{{$degree->institution}}, {{$degree->year}}</p>
-                                <p class="lead pull-right">{{ $degree->gpa }} GPA</p>
+                            <div class="col-6">
+                                <p class="lead">{{$degree->institution}}, {{$degree->year}}</p>
+                                <p class="lead">{{ $degree->gpa }} GPA</p>
+                                @if(isset($degree->courses))
+                                    <h4>Courses</h4>
+                                    <ul class="list-unstyled row">
+                                        @foreach($degree->courses as $course)
+                                            <li class="list-item col-5 py-2">{{ $course->course }} - {{ $course->name }}</li>
+                                        @endforeach
+                                    </ul>
+                                @endif
                             </div>
                         </div>
                     </li>

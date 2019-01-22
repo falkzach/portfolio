@@ -75,12 +75,125 @@ I had to stick around another semester in the fall, I needed one class and I was
 
 The final semester. Turns out I have to take a second course or else financial aid wants money now. I can play that game, so in addition to repeating Computational Biology I did an independent study of Compilers. I wrote a wicked fast fragment assembler and learned Flex and Bison to build a C++ and most of a straight to x86_64 compiler (I'll eventually fix it). I had some extra free time this semester since I wasn't TAing, and with my recent love for whitewater I learned to kayak this fall too!
 
-Looking back is strange. To be honest I've been putting it off but now that I've retrospected the last couple years, it was pretty great. I took many interesting courses, studied under great professors and with talented peers, and Feel that I had a positive impact on the academic experience of my students. I am excited for what is next, whether that is staying in Missoula or going to a larger city elsewhere. But I'm excited to hit industry, to solve new and challenging problems.
-EOF;
+Looking back is strange. To be honest I've been putting it off but now that I've retrospected the last couple years a little bit, looking back it was great! I took many interesting courses, studied under great professors and with talented peers, and feel that I had a positive impact on the academic experience of my students. It didn't necessarily feel this way during school. I was stressed, semesters are never long enough, and there were some courses I was much less stoked on. But it was good. I am excited for what is next, whether that is staying in the lovely Missoula Montana or going to a larger city elsewhere. But I'm excited to hit industry, to solve new and challenging problems.
 
+
+EOF;
+        $course_id=0;
         $data = [
             'degrees' => (object) [
-                (object) ['name' => 'Master\'s of Science in Computer Science', 'year' => '2018', 'gpa' => '3.7', 'institution' => 'University of Montana'],
+                (object) [
+                    'name' => 'Master\'s of Science in Computer Science',
+                    'year' => '2018',
+                    'gpa' => '3.7',
+                    'institution' => 'University of Montana',
+                    'courses' => [
+                        (object) [
+                            'id' => ++$course_id,
+                            'course' => 'CSCI444',
+                            'name' => 'Data Visualization',
+                            'semester' => 'Autumn 2016',
+                            'grade' => 'A',
+                            'tags' => ['data science',],
+                        ],
+                        (object) [
+                            'id' => ++$course_id,
+                            'course' => 'CSCI595',
+                            'name' => 'ST: Advanced Client-Side Web Programming',
+                            'semester' => 'Autumn 2016',
+                            'grade' => 'B+',
+                            'tags' => ['web',],
+                        ],
+                        (object) [
+                            'id' => ++$course_id,
+                            'course' => 'CSCI477',
+                            'name' => 'Simulation and Modeling',
+                            'semester' => 'Spring 2017',
+                            'grade' => 'A-',
+                            'tags' => ['simulation', 'physics',],
+                        ],
+                        (object) [
+                            'id' => ++$course_id,
+                            'course' => 'CSCI564',
+                            'name' => 'Applications of Mining Big Data',
+                            'semester' => 'Spring 2017',
+                            'grade' => 'A',
+                            'tags' => ['data science',],
+                        ],
+                        (object) [
+                            'id' => ++$course_id,
+                            'course' => 'CSCI595',
+                            'name' => 'ST: Deep Learning',
+                            'semester' => 'Spring 2017',
+                            'grade' => 'A',
+                            'tags' => ['data science',],
+                        ],
+                        (object) [
+                            'id' => ++$course_id,
+                            'course' => 'CSCI441',
+                            'name' => 'Computer Graphics Programming',
+                            'semester' => 'Autumn 2017',
+                            'grade' => 'B',
+                            'tags' => ['games',],
+                        ],
+                        (object) [
+                            'id' => ++$course_id,
+                            'course' => 'CSCI595',
+                            'name' => 'ST: Internet of Things',
+                            'semester' => 'Autumn 2017',
+                            'grade' => 'A',
+                            'tags' => ['embedded machines',],
+                        ],
+                        (object) [
+                            'id' => ++$course_id,
+                            'course' => 'CSCI595',
+                            'name' => 'ST: Software Optimization',
+                            'semester' => 'Autumn 2017',
+                            'grade' => 'A-',
+                            'tags' => ['optimization',],
+                        ],
+                        (object) [
+                            'id' => ++$course_id,
+                            'course' => 'CSCI412',
+                            'name' => 'Game and Mobile App Development',
+                            'semester' => 'Spring 2018',
+                            'grade' => 'A-',
+                            'tags' => ['games','mobile'],
+                        ],
+                        (object) [
+                            'id' => ++$course_id,
+                            'course' => 'CSCI412',
+                            'name' => 'Machine Learning',
+                            'semester' => 'Spring 2018',
+                            'grade' => 'B+',
+                            'tags' => ['data science'],
+                        ],
+                        (object) [
+                            'id' => ++$course_id,
+                            'course' => 'CSCI595',
+                            'name' => 'ST: Game Physics Engines',
+                            'semester' => 'Spring 2018',
+                            'grade' => 'A-',
+                            'tags' => ['games', 'physics', 'simulation',],
+                        ],
+                        (object) [
+                            'id' => ++$course_id,
+                            'course' => 'CSCI558',
+                            'name' => 'Introduction to Bioinformatics',
+                            'semester' => 'Autumn 2018',
+                            'grade' => 'B+',
+                            'tags' => ['computation biology',],
+                        ],
+                        (object) [
+                            'id' => ++$course_id,
+                            'course' => 'CSCI592',
+                            'name' => 'Independent Study: Introduction to Compilers',
+                            'semester' => 'Autumn 2018',
+                            'grade' => 'A',
+                            'tags' => ['compilers',],
+                        ],
+                    ],
+                ],
                 (object) ['name' => 'Bachelor\'s of Science in Computer Science', 'year' => '2016', 'gpa' => '3.4', 'institution' => 'University of Montana',],
             ],
             'research' => (object) [
