@@ -247,20 +247,18 @@ EOF;
 
         $this->bike_thing_assignment =
             <<<EOF
-The Assignment in Jesse Johnsons Internet of Things (aka wifi enabled embeded systems) was simple, build an IoT device.
+The Assignment in Jesse Johnsons experimental Internet of Things (aka wifi enabled embeded systems) was simple, build an IoT device.
 EOF;
 
         $this->bike_thing_description =
             <<<EOF
-Me and my room mate and partner for this assignment are both avid mountain bikers. Avid (adjective) having or showing a keen interest in or enthusiasm for something. Just to be clear. I said avid, not good. We like to use <a href="https://www.strava.com/" alt="Strava Homepage">Strava</a> to track our trail riding and progression.
-
-
+Me and my room mate and partner for this assignment are both avid mountain bikers. Avid (adjective) having or showing a keen interest in or enthusiasm for something. Just to be clear. I said avid, not good. We like to use <a href="https://www.strava.com/" alt="Strava Homepage">Strava</a> to track our trail riding and progression. However this requires either your cell phone or a gps device which are often expensive.
+Our objective was to create a gps data logger that could be built for approximately $75, roughly half the cheapest competitor. We based it on the ESP32 platform, a modern System on Chip (SoC) architecture. While we hoped to build it entirely in the esp-idf native framework, however due to our early adoption, using Arduino resulted in a more stable final product. The device can record gps activity and store it on an sd card to later be uploaded to the web. The device also includes a 9DoF gyroscope/altimeter/magnetometer as an additional data source.
 EOF;
 
         $this->sim_assignment =
             <<<EOF
 Jesse Johnson's Simulation and Modeling course explores two major topics, ordinary and partial differential equations. Furthermore it explores the underlying numerical methods for differential integration, their implementation, and their use to simulate physics.
-
 The final assignment (exam) was to use the numerical method of lines, which uses both partial and differential equations, to simulate the heating of a teak kettle on a circular element.
 EOF;
 
@@ -283,12 +281,14 @@ EOF;
 
         $this->ml_assignment =
 <<<EOF
-
+The objective of this project was to Identify and implement a machine learning algorithm or to apply an existing implementation to a non trivial dataset. I elected the latter and came across a dataset that correlated substance abuse with measurable personality traits. 
 EOF;
 
         $this->ml_description =
 <<<EOF
-
+The project attempts to expand on work in done in the paper ”The Five Factor Model of personality and evaluation of drug consumption risk.” The original work did extensive searches over a variety of basic machine learning algorithms to a dataset consisting of demographic information, reporting of substance use, and evaluation of personality traits based on standardized surveys. The original study produced quality results . The plan is to extend this work to a Deep Neural Network Regressor leveraging the Tensorflow library in hopes that its sophistication can reveal deeper subtleties than more basic machine learning algorithms could yield.
+Results were interesting. Forst many substances, these modesl at best produced a guess. however for Caffine, Ketamine, Methadone, VSAs, Heroine and crack all models performed quite well. Of the personality traits, N-Scores (Neurotocism), O-Score(Openness to new experience), and SS (Sensation Seeking) where always present as the prime contributors to the models. Neural networks tened to perform as a coin flip with the exception of the control Semer. I attribute this to lack of Random Parameter Search.
+There seems to be some correlation to neurotocism, openeness to expeience, and sensation seeking and abuse potential for more serious drugs such as Heroine, Crack, and Ketamine. Certainly more data could shine better light on this. More data from a larger demographic could certainly attribute to better models as the sample size was quite small and the distribution of reported users was quite small. Furthermore, time did not allow for large scale feature/parameter subset searches. Applying these searches, particularly to the neural network classifier could produce better results.
 EOF;
     }
 
@@ -354,6 +354,9 @@ EOF;
                     'links' => (object) [
                         (object) ['url' => 'https://github.com/um-iot/IoT-bike-thing', 'class' => 'github',]
                     ],
+                    'images' => [
+                        (object) ['key' => 0, 'src' => 'img/projects/bike_thing_prototype.png', 'alt' => 'A working prototype of the Bike Thing'],
+                    ],
                 ],
                 (object) [
                     'id' => ++$p_id,
@@ -390,7 +393,8 @@ EOF;
                     'description' => $this->ml_description,
                     'links' => (object) [
                         (object) ['url' => 'https://github.com/falkzach/CSCI547-Machine-Learning/blob/master/Project/explore_consumption.py', 'class' => 'github',],
-                        (object) ['url' => asset('files/ml_assignment.pdf'), 'class' => 'file', 'name' => 'Assignment',],
+                        (object) ['url' => asset('files/ml_assignment_idea.pdf'), 'class' => 'file', 'name' => 'Assignment Idea',],
+                        (object) ['url' => asset('files/ml_assignment_proposal.pdf'), 'class' => 'file', 'name' => 'Assignment Proposal',],
                         (object) ['url' => asset('files/falkner_substance_abuse_classification.pdf'), 'class' => 'file', 'name' => 'Report',],
 
                     ],
