@@ -5,6 +5,7 @@
     <div class="inner text-left col-8 mx-auto">
         <br>
         <h1>Graduate Projects</h1>
+        <p class="lead">{{ $headline }}</p>
         <div id="projects" role="tablist" aria-multiselectable="true">
             @foreach($projects as $project)
             <div class="card bg-dark text-white">
@@ -13,7 +14,6 @@
                         <button class="btn btn-link" data-toggle="collapse" data-parent="#projects" data-target="#project-{{$project->id}}" aria-controls="project-{{$project->id}}">
                             {{$project->name}}
                         </button>
-
                     </h2>
                     <pre class="mb-0 text-light pull-right">{{ $project->course }}</pre>
 

@@ -295,18 +295,9 @@ EOF;
     {
         $p_id = 0;
         $data = [
+            'headline' => 'In no particular order, here is a collection of projects and assignments that demonstrate graduate level scholarly work during my time at the University of Montana.',
             'projects' => [
-                (object) [
-                    'id' => ++$p_id,
-                    'name' => 'Introduction to Compilers',
-                    'course' => 'CSCI592 - Independent Study',
-                    'assignment' => $this->compilers_assignment,
-                    'description' => $this->compilers_description,
-                    'links' => (object) [
-                        (object) ['url' => 'https://bitbucket.org/orserang/intro-compiler-design', 'class' => 'bitbucket', 'tooltip' => $this->compilers_link_tooltip],
-                    ],
-                    'snippets' => [$this->compilers_snippet]
-                ],
+
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Fairly Fast Fragment Assembly Program',
@@ -321,6 +312,34 @@ EOF;
                     'images' => [
                         (object) ['key' => 0, 'src' => 'img/codewolf_small.png', 'alt' => 'The code wolf girl that appears on Dr. Serangs Custom Screen Printed shirts'],
                         ],
+                ],
+                (object) [
+                    'id' => ++$p_id,
+                    'name' => 'Simulation Modeling Assignments',
+                    'course' => 'CSCI477 - Simulation and Modeling',
+                    'assignment' => $this->sim_assignment,
+                    'description' => $this->sim_description,
+                    'links' => (object) [
+                        (object) ['url' => 'https://github.com/falkzach/CSCI557-Simulation-Modeling', 'class' => 'github',],
+                        (object) ['url' => 'https://github.com/falkzach/CSCI557-Simulation-Modeling/blob/master/final_exam/Final%20Exam-Falkner.ipynb', 'class' => 'github', 'name'=> 'Final Exam: Tea Kettle Simulation'],
+                    ],
+                    'images' => [
+                        (object) ['key' => 0, 'src' => 'img/projects/sim_0.png', 'alt' => 'Tea kettle simulation at 0.0 seconds'],
+                        (object) ['key' => 0, 'src' => 'img/projects/sim_1.png', 'alt' => 'Tea kettle simulation at 5.5 seconds'],
+                        (object) ['key' => 0, 'src' => 'img/projects/sim_2.png', 'alt' => 'Tea kettle simulation at 8.3 seconds'],
+                        (object) ['key' => 0, 'src' => 'img/projects/sim_3.png', 'alt' => 'Tea kettle simulation at 11.1 seconds'],
+                    ],
+                ],
+                (object) [
+                    'id' => ++$p_id,
+                    'name' => 'Introduction to Compilers',
+                    'course' => 'CSCI592 - Independent Study',
+                    'assignment' => $this->compilers_assignment,
+                    'description' => $this->compilers_description,
+                    'links' => (object) [
+                        (object) ['url' => 'https://bitbucket.org/orserang/intro-compiler-design', 'class' => 'bitbucket', 'tooltip' => $this->compilers_link_tooltip],
+                    ],
+                    'snippets' => [$this->compilers_snippet]
                 ],
                 (object) [
                     'id' => ++$p_id,
@@ -355,23 +374,6 @@ EOF;
                     ],
                     'images' => [
                         (object) ['key' => 0, 'src' => 'img/projects/bike_thing_prototype.png', 'alt' => 'A working prototype of the Bike Thing'],
-                    ],
-                ],
-                (object) [
-                    'id' => ++$p_id,
-                    'name' => 'Simulation Modeling Assignments',
-                    'course' => 'CSCI477 - Simulation and Modeling',
-                    'assignment' => $this->sim_assignment,
-                    'description' => $this->sim_description,
-                    'links' => (object) [
-                        (object) ['url' => 'https://github.com/falkzach/CSCI557-Simulation-Modeling', 'class' => 'github',],
-                        (object) ['url' => 'https://github.com/falkzach/CSCI557-Simulation-Modeling/blob/master/final_exam/Final%20Exam-Falkner.ipynb', 'class' => 'github', 'name'=> 'Final Exam: Tea Kettle Simulation'],
-                    ],
-                    'images' => [
-                        (object) ['key' => 0, 'src' => 'img/projects/sim_0.png', 'alt' => 'Tea kettle simulation at 0.0 seconds'],
-                        (object) ['key' => 0, 'src' => 'img/projects/sim_1.png', 'alt' => 'Tea kettle simulation at 5.5 seconds'],
-                        (object) ['key' => 0, 'src' => 'img/projects/sim_2.png', 'alt' => 'Tea kettle simulation at 8.3 seconds'],
-                        (object) ['key' => 0, 'src' => 'img/projects/sim_3.png', 'alt' => 'Tea kettle simulation at 11.1 seconds'],
                     ],
                 ],
                 (object) [
