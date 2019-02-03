@@ -1,7 +1,7 @@
 @extends('template.base')
 
 @section('body')
-    <div class="inner text-left col-8 mx-auto">
+    <div class="inner text-left col-lg-8 col-md-10 col-sm-12 mx-auto">
         <br>
         <h1>Graduate CV</h1>
         <div class="">

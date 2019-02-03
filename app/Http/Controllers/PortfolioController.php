@@ -39,7 +39,7 @@ class PortfolioController extends Controller
                 "Seeking a position as a Software Developer"
             ],
             'banners' => [
-                (object) ['src'=>asset("img/canyon_creek_pano.jpg"),'alt'=>"Canyon Creek, panoramic of an alpine lake and surrounding peaks"]
+                (object) ['src'=>asset("img/canyon_creek_pano.jpg"), 'src_small'=>asset("img/outdoors/backpacking_canyon_creek.jpg"),'alt'=>"Canyon Creek, panoramic views of an alpine lake and surrounding peaks"]
             ]
         ];
         return view('index', $data);

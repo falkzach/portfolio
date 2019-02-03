@@ -2,6 +2,7 @@
 
 @section('body')
     <div class="inner cover">
+        <br>
         <h1 class="cover-heading">Contact</h1>
         <p class="lead">//TODO: contact form coming soon. In the meantime, please contact me through one of the methods bellow.</p>
         <p class="lead">
