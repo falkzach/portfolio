@@ -36,7 +36,7 @@ class PortfolioController extends Controller
             'headlines' => [
                 "Master's of Science in Computer Science",
                 "University of Montana, 2018",
-                "Seeking a position as a Software Developer"
+                "Seeking a position as a Software Engineer"
             ],
             'banners' => [
                 (object) ['src'=>asset("img/canyon_creek_pano.jpg"), 'src_small'=>asset("img/outdoors/backpacking_canyon_creek.jpg"),'alt'=>"Canyon Creek, panoramic views of an alpine lake and surrounding peaks"]
