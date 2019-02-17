@@ -15,7 +15,7 @@ During my time as an undergraduate at the University of Montana, I worked for th
 EOF;
         $this->commonComponentsDescription =
             <<<EOF
-Many of the applications we built utalized common compoents which we comparmentalized into their own repositories. This included themes and templaes, authentication, and api client compoentnts.
+Many of the applications we built utilized common components which we compartmentalized into their own repositories. This included themes and templates, authentication, and api client components.
 <ul>
 <li>Comment API Client</li>
 <li>Directory API Client</li>
@@ -57,7 +57,7 @@ EOF;
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Food Zoo Menu',
-                    'department' => 'University of Montana Dining Services',
+                    'department' => 'UM Dining',
                     'description' => 'The Food Zoo Menu was my first full ground up project with Student Affairs IT. Prior to its development menus for the Food Zoo at the University of Montana were made as a PowerPoint to be displayed outside on a TV. This process was labor intensive, the menus provided no nutritional information, and menus were only available outside the Food Zoo. Alternatives implementations were explored, included a produced from the backend enterpise software that UM Dining uses. However cost was prohibative and available features fell short of need so ultimatly a custom solution was decided on. All information is pulled directly from the existing system. Overrides for what menus are displayed, item name changes and other display controls are available to UM Dining staff. Once item and menu overrides are configured the application is mostly hands off eliminating the daily labor of producing menus. The app consists of a CRUD management backend, an Angular frontend integrated into the UM page, a React Compontent within the UM App, a menu board page that directly feeds the TV menu`s at the Food Zoo, and generates printable cards with nutritional information. The application allows users to filter based on dietary needs and alergens and more easily plan their meals. I take great pride in this application and know many people who use it reguarly while on campus. When I last asked, it was 2nd by analitics on the umt domain only to the home page.',
                     'links' => (object) [
                         (object) ['url' => 'https://www.umt.edu/dining/foodzoomenu','class' => 'external-link',],
@@ -100,8 +100,8 @@ EOF;
                 (object) [
                     'id' => ++$p_id,
                     'name' => 'Bus Tracker',
-                    'department' => 'ASUM Transportation',
-                    'description' => 'The ASUM Transportation office was having difficulty tracking paperwork. Federal compliance can be difficult and excel spread sheets were not cutting it. The Bus Tracker application streamlined their paperwork workflow greatly reducing data entry time, reduced errors through data validation, simplified report generation, and allowed ASUM to easily maintain federal compliance.',
+                    'department' => 'ASUM Office of Transportation',
+                    'description' => 'The ASUM Office of Transportation was having difficulty tracking paperwork. Federal compliance can be difficult and excel spread sheets were not cutting it. The Bus Tracker application streamlined their paperwork workflow greatly reducing data entry time, reduced errors through data validation, simplified report generation, and allowed the ASUM Office of Transportation to easily maintain federal compliance.',
                     'links' => (object) [
                         
                     ],
