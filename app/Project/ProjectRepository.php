@@ -397,38 +397,10 @@ EOF;
                         (object) ['url' => asset('files/ml_assignment_idea.pdf'), 'class' => 'file', 'name' => 'Assignment Idea',],
                         (object) ['url' => asset('files/ml_assignment_proposal.pdf'), 'class' => 'file', 'name' => 'Assignment Proposal',],
                         (object) ['url' => asset('files/falkner_substance_abuse_classification.pdf'), 'class' => 'file', 'name' => 'Report',],
-
                     ],
                 ],
             ],
         ];
         return $data;
     }
-
-//    public function getSAIT() {
-//                $data= [
-//                'SAIT_APPS' => [
-//                'Food Zoo Menu',
-//                'Student Hiring',
-//                'Bus Tracker',
-//                'Girz Card Photos',
-//                'Scheduled Email',
-//                'Campus Hours',
-//                'Directory API',
-//                'Comment and Attachment API',
-//                'UM Mobile App'
-//                //legacy
-//                'DCO Home',//keep
-//                'Email Queue',
-//                'Merchant Map',//keep
-//                'Hall Snacks',
-//                'Bear Hugs',
-//                'Game Room Table Timers',
-//                'RLO Discipline Database',
-//                'RLO Duty Log',
-//                'Renter Center Housing',
-//                'Renter Center Landlord Review',
-//                ]
-//        ];
-//    }
 }

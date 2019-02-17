@@ -9,7 +9,7 @@
         <div id="hobbies-carousel" class="carousel slide col-sm-12 col-md-12 col-lg-8 offset-lg-2" data-ride="carousel">
             <ol class="carousel-indicators">
                 @foreach($images as $key => $image)
-                    <li data-target="#hobbies-carousel" data-slide-to="0" class="<?=$key===0?'active':''?>"></li>
+                    <li data-target="#hobbies-carousel" data-slide-to="{{$key}}" class="<?=$key===0?'active':''?>"></li>
                 @endforeach
             </ol>
             <div class="carousel-inner" role="listbox">

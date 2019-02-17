@@ -1,6 +1,7 @@
 <?php namespace falkzach\portfolio\Http\Controllers;
 
 use falkzach\portfolio\Project\ProjectRepository;
+use falkzach\portfolio\Project\SAITProjectRepository;
 
 class PortfolioController extends Controller
 {
@@ -9,9 +10,15 @@ class PortfolioController extends Controller
      */
     private $projectRepository;
 
-    public function __construct(ProjectRepository $projectRepository)
+    /**
+     * @var SAITProjectRespoisotry
+     */
+    private $saitRepository;
+
+    public function __construct(ProjectRepository $projectRepository, SAITProjectRepository $saitRepository)
     {
         $this->projectRepository = $projectRepository;
+        $this->saitRepository = $saitRepository;
     }
 
     public function index()
@@ -43,6 +50,12 @@ class PortfolioController extends Controller
             ]
         ];
         return view('index', $data);
+    }
+
+    public function saitProjects()
+    {
+        $data = $this->saitRepository->getAll();
+        return view('sait_projects', $data);
     }
 
     public function projects()
